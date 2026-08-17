@@ -6,6 +6,6 @@
 
 <script setup lang="ts">
 useHead({
-  titleTemplate: '%s — SealPro',
+  titleTemplate: '%s — PT Anugrah Megah Perkasa',
 })
 </script>

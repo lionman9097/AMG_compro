@@ -6,13 +6,16 @@
     "dev": "nuxt dev",
     "build": "nuxt build",
     "generate": "nuxt generate",
-    "preview": "nuxt preview"
+    "preview": "nuxt preview",
+    "generate:favicon": "bun run scripts/generate-favicon.ts"
   },
   "dependencies": {
+    "@lucide/vue": "^1.28.0",
+    "@realfavicongenerator/generate-favicon": "^0.8.4",
+    "@realfavicongenerator/image-adapter-node": "^0.8.4",
     "nuxt": "^4.0.0",
     "vue": "latest",
-    "vue-router": "latest",
-    "@lucide/vue": "^1.28.0"
+    "vue-router": "latest"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.13.0",

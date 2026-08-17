@@ -14,25 +14,47 @@
     <!-- Content -->
     <div class="relative container-site w-full py-24 md:py-0">
       <div class="max-w-3xl">
-        <!-- Main logo -->
-        <div class="mb-10">
-          <img :src="heroImage" alt="Industrial silicone sealant application" class="w-full h-full object-cover"
-            loading="eager" />
+        <!-- 3-Logo Unified Lockup -->
+        <div
+          class="mb-4 md:mb-6 inline-flex flex-wrap items-center gap-3 sm:gap-4 px-3.5 py-2 rounded-xl bg-zinc-900/70 backdrop-blur-xl border border-white/15 hover:border-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.35)] transition-colors duration-300">
+          <!-- Main Company Brand -->
+          <div class="flex items-center justify-center md:w-auto w-full ">
+            <img src="/logo1.png" alt="PT Anugrah Megah Perkasa"
+              class="h-6 sm:h-7 w-auto object-contain drop-shadow-[0_2px_8px_rgba(0,163,255,0.35)]" />
+          </div>
+
+          <!-- Divider -->
+          <div class="hidden sm:block w-px h-6 bg-white/20" />
+
+          <!-- 2 Child / Partner Logos -->
+          <div class="flex items-center gap-2.5">
+            <span class="text-[10px] text-zinc-400 font-mono tracking-wider uppercase leading-none">Authorized
+              Distributor and Partner of</span>
+
+            <!-- Child 1: DURABUILD -->
+            <div
+              class="h-6 px-0.5 bg-black/80 rounded border border-white/15 flex items-center shadow-sm hover:scale-105 transition-transform duration-200">
+              <img src="/logo3.png" alt="DURABUILD" class="h-6 w-auto object-contain" />
+            </div>
+
+            <!-- Child 2: WACKER -->
+            <div
+              class="h-6 bg-white rounded flex items-center shadow-sm hover:scale-105 transition-transform duration-200">
+              <img src="/logo2.png" alt="WACKER" class="h-6 w-auto object-contain" />
+            </div>
+          </div>
         </div>
 
-        <!-- Lead figure -->
-        <div class="stat-figure text-white/95 animate-tick tnum">
-          18<span class="text-cobalt-accent">+</span>
-        </div>
-
-        <h1
-          class="font-display text-3xl md:text-4xl lg:text-5xl text-white mt-4 mb-6 leading-tight tracking-tight text-balance">
-          Years of engineering bonds<br class="hidden sm:block" /> that last.
+        <!-- Lead Heading -->
+        <h1 class="font-display text-6xl md:text-9xl font-semibold text-white/95 tracking-tight leading-[1.05] mb-6">
+          PT <span class="text-cobalt-accent">Anugrah</span> Megah<br />
+          <span>Perkasa</span>
         </h1>
 
         <p class="text-zinc-300 text-lg max-w-xl mb-10 leading-relaxed">
-          Premium industrial silicone sealants for construction, manufacturing, and specialty applications. Trusted by
-          2,500+ clients across the Asia-Pacific.
+          One-component neutral silicone weather-resistant adhesive for doors, windows, glass, and aluminum.
+          <br />
+          <span class="text-cobalt-accent text-3xl font-extrabold shadow-lg"> Built to seal. Built to last. </span>
         </p>
 
         <div class="flex flex-wrap gap-3 mb-12">
@@ -44,26 +66,6 @@
             class="pill-cta-secondary !border-zinc-400 !text-zinc-200 hover:!border-white hover:!text-white">
             Get a Quote
           </NuxtLink>
-        </div>
-
-        <!-- Secondary logos row -->
-        <div class="flex items-center gap-6">
-          <span class="text-[11px] text-zinc-500 font-medium tracking-widest uppercase">Certified</span>
-          <div class="w-px h-5 bg-zinc-600" />
-          <!-- ISO 9001 badge -->
-          <svg class="h-6 w-auto opacity-60 hover:opacity-90 transition-opacity duration-200" viewBox="0 0 90 32"
-            fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0.5" y="0.5" width="89" height="31" rx="4" stroke="white" stroke-opacity="0.4" fill="none" />
-            <text x="45" y="21" text-anchor="middle" font-family="'Inter', system-ui, sans-serif" font-weight="600"
-              font-size="11" fill="white" fill-opacity="0.7" letter-spacing="1">ISO 9001</text>
-          </svg>
-          <!-- CE Certified badge -->
-          <svg class="h-6 w-auto opacity-60 hover:opacity-90 transition-opacity duration-200" viewBox="0 0 90 32"
-            fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0.5" y="0.5" width="89" height="31" rx="4" stroke="white" stroke-opacity="0.4" fill="none" />
-            <text x="45" y="21" text-anchor="middle" font-family="'Inter', system-ui, sans-serif" font-weight="600"
-              font-size="11" fill="white" fill-opacity="0.7" letter-spacing="1">CE Certified</text>
-          </svg>
         </div>
       </div>
     </div>
