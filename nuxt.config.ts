@@ -52,7 +52,9 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
+      crawlLinks: false,
       routes: ['/', '/about', '/products', '/contact'],
+      ignore: ['//', '/__nuxt_error', '//__nuxt_error'],
     },
   },
 })
