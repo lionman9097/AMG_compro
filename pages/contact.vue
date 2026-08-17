@@ -39,8 +39,49 @@
 </template>
 
 <script setup lang="ts">
+import { company } from '~/data/company'
 import ContactForm from '~/components/ContactForm.vue'
 import CompanyInfo from '~/components/CompanyInfo.vue'
 
-useHead({ title: 'Contact' })
+useSeoMeta({
+  title: 'Contact PT Anugrah Megah Perkasa — Get a Silicone Sealant Quote',
+  description: 'Request a quote or technical consultation for DURABUILD industrial silicone sealants and weather-resistant adhesives from PT Anugrah Megah Perkasa.',
+  ogTitle: 'Contact PT Anugrah Megah Perkasa — DURABUILD Sealant Quotes',
+  ogDescription: 'Get in touch with our technical team for industrial silicone sealant pricing, TDS sheets, and delivery options across Indonesia.',
+  ogImage: 'https://anugrah-megahperkasa.com/og-image.png',
+  ogUrl: 'https://anugrah-megahperkasa.com/contact',
+  twitterCard: 'summary_large_image',
+})
+
+useHead({
+  title: 'Contact Us — PT Anugrah Megah Perkasa',
+  link: [
+    { rel: 'canonical', href: 'https://anugrah-megahperkasa.com/contact' },
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'ContactPage',
+        name: 'Contact PT Anugrah Megah Perkasa',
+        description: 'Get in touch with PT Anugrah Megah Perkasa for DURABUILD silicone sealant inquiries and quotes.',
+        url: 'https://anugrah-megahperkasa.com/contact',
+        mainEntity: {
+          '@type': 'Organization',
+          name: company.name,
+          telephone: company.contact.phone,
+          email: company.contact.email,
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: 'Jl. Industri Raya No. 88, Kawasan Industri Pulogadung',
+            addressLocality: 'Jakarta Timur',
+            postalCode: '13920',
+            addressCountry: 'ID',
+          },
+        },
+      }),
+    },
+  ],
+})
 </script>

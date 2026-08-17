@@ -11,13 +11,31 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'SealPro — Industrial Silicone Sealant Solutions',
+      title: 'PT Anugrah Megah Perkasa — Industrial Silicone Sealants & DURABUILD Distributor',
       htmlAttrs: { lang: 'en' },
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'SealPro distributes premium industrial silicone sealants for construction, manufacturing, and specialty applications.' },
+        { name: 'description', content: 'PT Anugrah Megah Perkasa is the official distributor of DURABUILD high-performance neutral and acetic silicone sealants for construction, door/window glazing, and industrial applications.' },
+        { name: 'keywords', content: 'silicone sealant, DURABUILD, neutral silicone sealant, acetic silicone sealant, weather resistant adhesive, PT Anugrah Megah Perkasa, sealant supplier Indonesia, industrial adhesive, facade glazing silicone' },
+        { name: 'author', content: 'PT Anugrah Megah Perkasa' },
         { name: 'apple-mobile-web-app-title', content: 'AMG' },
+        
+        // Open Graph / Facebook / WhatsApp
+        { property: 'og:type', content: 'website' },
+        { property: 'og:site_name', content: 'PT Anugrah Megah Perkasa' },
+        { property: 'og:title', content: 'PT Anugrah Megah Perkasa — Official DURABUILD Silicone Sealant Distributor' },
+        { property: 'og:description', content: 'High-performance one-component neutral and acetic silicone sealants for construction, door/window glazing, and manufacturing.' },
+        { property: 'og:image', content: 'https://anugrah-megahperkasa.com/og-image.png' },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '630' },
+        { property: 'og:locale', content: 'en_US' },
+
+        // Twitter Cards
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: 'PT Anugrah Megah Perkasa — DURABUILD Silicone Sealants' },
+        { name: 'twitter:description', content: 'Official distributor of DURABUILD industrial silicone sealants and weather-resistant adhesive solutions.' },
+        { name: 'twitter:image', content: 'https://anugrah-megahperkasa.com/og-image.png' },
       ],
       link: [
         { rel: 'icon', type: 'image/png', href: '/favicon-96x96.png', sizes: '96x96' },

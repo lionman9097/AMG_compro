@@ -6,6 +6,10 @@
 
 <script setup lang="ts">
 useHead({
-  titleTemplate: '%s — PT Anugrah Megah Perkasa',
+  titleTemplate: (titleChunk) => {
+    if (!titleChunk) return 'PT Anugrah Megah Perkasa — Industrial Silicone Sealants & DURABUILD Distributor'
+    if (titleChunk.includes('PT Anugrah Megah Perkasa')) return titleChunk
+    return `${titleChunk} — PT Anugrah Megah Perkasa`
+  },
 })
 </script>

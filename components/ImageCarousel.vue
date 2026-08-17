@@ -151,7 +151,7 @@ export interface ImageSlide {
 const slides: ImageSlide[] = [
   {
     id: 'slide-durabuild-main',
-    src: '/durabuild_main.png',
+    src: '/durabuild_main.webp',
     title: 'DURABUILD Neutral & Acetic Silicone High Quality Sealants',
     shortTitle: 'DURABUILD Product Line',
     tag: 'PRODUCT OVERVIEW',
@@ -159,7 +159,7 @@ const slides: ImageSlide[] = [
   },
   {
     id: 'slide-technical-tds',
-    src: '/technical.png',
+    src: '/technical.webp',
     title: 'Technical Data Sheet (TDS) & Application Methods',
     shortTitle: 'TDS & Specifications',
     tag: 'TECHNICAL SHEET',
@@ -167,7 +167,7 @@ const slides: ImageSlide[] = [
   },
   {
     id: 'slide-color-options',
-    src: '/color_options.jpg',
+    src: '/color_options.webp',
     title: 'Available Colors & Application Substrates',
     shortTitle: 'Colors & Substrates',
     tag: 'COLOR & APPLICATION',

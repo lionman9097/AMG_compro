@@ -12,7 +12,7 @@
     <div class="absolute inset-0 bg-gradient-to-tr from-zinc-950/40 via-transparent to-cobalt-accent/10" />
 
     <!-- Content -->
-    <div class="relative container-site w-full py-24 md:py-0">
+    <div class="relative container-site w-full py-24">
       <div class="max-w-3xl">
         <!-- 3-Logo Unified Lockup -->
         <div
