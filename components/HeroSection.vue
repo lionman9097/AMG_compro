@@ -48,7 +48,7 @@
 
         <!-- Lead Heading -->
         <h1
-          class="font-display text-8xl font-semibold text-white/95 tracking-tight leading-[1.05] mb-3 sm:mb-4 lg:mb-6">
+          class="font-display text-6xl sm:text-7xl md:text-8xl  font-semibold text-white/95 tracking-tight leading-[1.05] mb-3 sm:mb-4 lg:mb-6">
           PT <span class="text-cobalt-accent">Anugrah</span> Megah<br />
           <span>Perkasa</span>
         </h1>
