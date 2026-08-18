@@ -9,29 +9,26 @@
         Get in Touch
       </h1>
       <p class="text-zinc-500 text-lg max-w-2xl leading-relaxed">
-        Response within 24 hours. Our technical team is ready to help you find the perfect sealant for your application.
+        Response within 24 hours. Our technical team is ready to help you find the perfect sealant for your development.
       </p>
     </section>
 
     <!-- Two-column contact -->
-    <section class="container-site border-t border-zinc-200 section-spacing">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+    <section class="container-site border-t border-zinc-200 py-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
         <!-- Form -->
-        <div>
-          <span class="block text-xs font-medium tracking-widest uppercase text-zinc-400 mb-8">Send a Message</span>
+        <div class="lg:col-span-5">
+          <span class="block text-xs font-mono font-medium tracking-widest uppercase text-zinc-400 mb-6">01 · Send a
+            Message</span>
           <ContactForm />
         </div>
 
         <!-- Info -->
-        <div>
-          <span class="block text-xs font-medium tracking-widest uppercase text-zinc-400 mb-8">Contact Information</span>
+        <div class="lg:col-span-7">
+          <span class="block text-xs font-mono font-medium tracking-widest uppercase text-zinc-400 mb-6">02 · Company
+            Offices & Direct Contacts</span>
           <CompanyInfo />
 
-          <hr class="hairline-rule mt-10 mb-8" />
-
-          <p class="text-[13px] text-zinc-400 leading-relaxed">
-            We typically respond within one business day. For urgent technical inquiries, please call us directly.
-          </p>
         </div>
       </div>
     </section>
@@ -79,6 +76,17 @@ useHead({
             postalCode: '13920',
             addressCountry: 'ID',
           },
+          department: company.locations.map(loc => ({
+            '@type': 'LocalBusiness',
+            name: `${company.name} — ${loc.title}`,
+            telephone: loc.phone,
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: loc.address,
+              addressLocality: loc.city,
+              addressCountry: 'ID',
+            },
+          })),
         },
       }),
     },

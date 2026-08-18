@@ -1,3 +1,16 @@
+export interface CompanyLocation {
+  id: string
+  title: string
+  badge?: string
+  city: string
+  address: string
+  whatsapp: string
+  whatsappUrl: string
+  phone: string
+  phoneUrl: string
+  isPrimary?: boolean
+}
+
 export interface CompanyInfo {
   name: string
   brand: string
@@ -16,6 +29,7 @@ export interface CompanyInfo {
     email: string
     hours: string
   }
+  locations: CompanyLocation[]
 }
 
 export const company: CompanyInfo = {
@@ -63,9 +77,56 @@ export const company: CompanyInfo = {
     { year: 2023, title: 'Nationwide Logistics Network', description: 'Established 6 regional distribution hubs supporting over 2,500 commercial and industrial clients.' },
   ],
   contact: {
-    address: 'Jl. Industri Raya No. 88, Kawasan Industri Pulogadung, Jakarta Timur 13920, Indonesia',
-    phone: '+62 21 4683 2000',
-    email: 'info@anugrah-megahperkasa.com',
-    hours: 'Monday – Friday: 8:00 AM – 5:00 PM (WIB)',
+    address: 'Jl. Daan Mogot No.121B, RT.006/RW.005, Duri Kepa, Kec. Kebun Jeruk, Kota Jakarta Barat , DKI Jakarta 11510',
+    phone: '(021) 5660 147',
+    email: '-',
+    hours: 'Monday – Saturday: 8:00 AM – 5:00 PM',
   },
+  locations: [
+    {
+      id: 'jakarta-hq',
+      title: 'Kantor Jakarta',
+      badge: 'Head Office',
+      city: 'Jakarta Barat',
+      address: 'Jl. Daan Mogot No.121B, RT.006/RW.005, Duri Kepa, Kec. Kebun Jeruk, Kota Jakarta Barat , DKI Jakarta 11510',
+      whatsapp: '+62 858 9211 4782',
+      whatsappUrl: 'https://wa.me/6285892114782',
+      phone: '(021) 5660 147',
+      phoneUrl: 'tel:+62215660147',
+      isPrimary: true,
+    },
+    {
+      id: 'bekasi-branch',
+      title: 'Kantor Bekasi',
+      badge: 'Branch Office',
+      city: 'Bekasi',
+      address: 'Perumahan Bojong Menteng Indah Blok H.11 Jl. Kemuning Raya, Bojong Menteng, Kec. Rawalumbu, Kota Bekasi, Jawa Barat 17117',
+      whatsapp: '+62 858 9211 4782',
+      whatsappUrl: 'https://wa.me/6285892114782',
+      phone: '(021) 5660 147',
+      phoneUrl: 'tel:+62215660147',
+    },
+    {
+      id: 'surabaya-branch',
+      title: 'Kantor Surabaya',
+      badge: 'Branch Office',
+      city: 'Surabaya',
+      address: 'Ruko Mangga Dua Blok B9 No 9, Jagir Wonokromo, Surabaya, Jawa Timur 60243',
+      whatsapp: '+62 877 6956 8729',
+      whatsappUrl: 'https://wa.me/6287769568729',
+      phone: '-',
+      phoneUrl: '-',
+    },
+    {
+      id: 'semarang-branch',
+      title: 'Kantor Semarang',
+      badge: 'Branch Office',
+      city: 'Semarang',
+      address: 'Ruko Galaxy 10, Jl. Soekarno Hatta No.7, Sawahan Besar, Kec. Gayamsari, Kota Semarang, Jawa Tengah 50166',
+      whatsapp: '-',
+      whatsappUrl: '-',
+      phone: '-',
+      phoneUrl: '-',
+    },
+  ],
 }
