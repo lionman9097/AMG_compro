@@ -12,7 +12,7 @@
     <div class="absolute inset-0 bg-gradient-to-tr from-zinc-950/50 via-transparent to-cobalt-accent/10" />
 
     <!-- Content: scaled for max 100vh fit -->
-    <div class="relative container-site w-full pt-20 pb-16 sm:pt-24 sm:pb-20 flex flex-col justify-center">
+    <div class="relative container-site w-full pt-20 pb-16 sm:pt-24 sm:pb-20 flex flex-col justify-center h-screen">
       <div class="max-w-3xl">
         <!-- 3-Logo Unified Lockup -->
         <div
