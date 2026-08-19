@@ -12,14 +12,14 @@
     <div class="absolute inset-0 bg-gradient-to-tr from-zinc-950/50 via-transparent to-cobalt-accent/10" />
 
     <!-- Content: scaled for max 100vh fit -->
-    <div class="relative container-site w-full pt-20 pb-16 sm:pt-24 sm:pb-20 flex flex-col justify-center h-screen">
+    <div class="relative container-site w-full pt-20 pb-16 sm:pt-28 sm:pb-20 flex flex-col justify-center h-screen">
       <div class="max-w-3xl">
         <!-- 3-Logo Unified Lockup -->
         <div
           class="mb-3 sm:mb-4 lg:mb-6 inline-flex flex-wrap items-center gap-2.5 sm:gap-3.5 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl bg-zinc-900/70 backdrop-blur-xl border border-white/15 hover:border-white/30 shadow-[0_8px_32px_rgba(0,0,0,0.35)] transition-colors duration-300">
           <!-- Main Company Brand -->
           <div class="flex items-center justify-center">
-            <img src="/logo1.png" alt="PT Anugrah Megah Perkasa"
+            <img src="/logo1.png" alt="PT Anugerah Megah Perkasa"
               class="h-5 sm:h-6 md:h-7 w-auto object-contain drop-shadow-[0_2px_8px_rgba(0,163,255,0.35)]" />
           </div>
 
@@ -49,18 +49,19 @@
         <!-- Lead Heading -->
         <h1
           class="font-display text-6xl sm:text-7xl md:text-8xl  font-semibold text-white/95 tracking-tight leading-[1.05] mb-3 sm:mb-4 lg:mb-6">
-          PT <span class="text-cobalt-accent">Anugrah</span> Megah<br />
+          PT <span class="text-cobalt-accent">Anugerah</span> Megah<br />
           <span>Perkasa</span>
         </h1>
 
         <!-- Description & Slogan -->
         <div class="max-w-xl mb-6 sm:mb-8">
           <p class="text-zinc-300 text-sm sm:text-base md:text-lg leading-relaxed">
-            One-component neutral silicone weather-resistant adhesive for doors, windows, glass, and aluminum.
+            Distributor of sealant products and construction supporting materials for construction, industrial, and
+            building projects.
           </p>
           <p
             class="mt-2 text-cobalt-accent text-lg sm:text-xl md:text-2xl font-bold tracking-tight drop-shadow-[0_2px_12px_rgba(0,163,255,0.4)]">
-            Built to seal. Built to last.
+            Trusted Partner for Quality Sealant Solutions
           </p>
         </div>
 

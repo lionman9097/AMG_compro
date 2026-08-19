@@ -28,7 +28,6 @@
           <span class="block text-xs font-mono font-medium tracking-widest uppercase text-zinc-400 mb-6">02 · Company
             Offices & Direct Contacts</span>
           <CompanyInfo />
-
         </div>
       </div>
     </section>
@@ -41,17 +40,17 @@ import ContactForm from '~/components/ContactForm.vue'
 import CompanyInfo from '~/components/CompanyInfo.vue'
 
 useSeoMeta({
-  title: 'Contact PT Anugrah Megah Perkasa — Get a Silicone Sealant Quote',
-  description: 'Request a quote or technical consultation for DURABUILD industrial silicone sealants and weather-resistant adhesives from PT Anugrah Megah Perkasa.',
-  ogTitle: 'Contact PT Anugrah Megah Perkasa — DURABUILD Sealant Quotes',
-  ogDescription: 'Get in touch with our technical team for industrial silicone sealant pricing, TDS sheets, and delivery options across Indonesia.',
+  title: 'Contact PT Anugerah Megah Perkasa — Get a Silicone Sealant Quote',
+  description: 'Request a quote or technical consultation for Wacker & Durabuild silicone sealants and construction supporting materials from PT Anugerah Megah Perkasa.',
+  ogTitle: 'Contact PT Anugerah Megah Perkasa — Sealant Quotes & Consultation',
+  ogDescription: 'Get in touch with our technical team for silicone sealant pricing, TDS sheets, and delivery options across Indonesia.',
   ogImage: 'https://anugrah-megahperkasa.com/og-image.png',
   ogUrl: 'https://anugrah-megahperkasa.com/contact',
   twitterCard: 'summary_large_image',
 })
 
 useHead({
-  title: 'Contact Us — PT Anugrah Megah Perkasa',
+  title: 'Contact Us — PT Anugerah Megah Perkasa',
   link: [
     { rel: 'canonical', href: 'https://anugrah-megahperkasa.com/contact' },
   ],
@@ -61,8 +60,8 @@ useHead({
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'ContactPage',
-        name: 'Contact PT Anugrah Megah Perkasa',
-        description: 'Get in touch with PT Anugrah Megah Perkasa for DURABUILD silicone sealant inquiries and quotes.',
+        name: 'Contact PT Anugerah Megah Perkasa',
+        description: 'Get in touch with PT Anugerah Megah Perkasa for Wacker & Durabuild silicone sealant inquiries and quotes.',
         url: 'https://anugrah-megahperkasa.com/contact',
         mainEntity: {
           '@type': 'Organization',
@@ -71,9 +70,8 @@ useHead({
           email: company.contact.email,
           address: {
             '@type': 'PostalAddress',
-            streetAddress: 'Jl. Industri Raya No. 88, Kawasan Industri Pulogadung',
-            addressLocality: 'Jakarta Timur',
-            postalCode: '13920',
+            streetAddress: company.contact.address,
+            addressLocality: 'Jakarta Barat',
             addressCountry: 'ID',
           },
           department: company.locations.map(loc => ({

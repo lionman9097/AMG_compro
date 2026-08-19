@@ -6,10 +6,10 @@
         Products
       </div>
       <h1 class="font-display text-3xl md:text-4xl text-zinc-900 mt-4 mb-3 tracking-tight">
-        DURABUILD Silicone Sealants &amp; Technical Specifications
+        Product Specifications &amp; Technical Datasheets
       </h1>
       <p class="text-zinc-600 text-base md:text-lg max-w-2xl leading-relaxed">
-        Explore authentic product images, technical data sheets (TDS), color options, and application standards for DURABUILD one-component neutral moisture-cure silicone weather-resistant adhesives.
+        Explore authentic product specifications, technical data sheets (TDS), color options, and application standards for high-performance silicone sealants and construction supporting materials distributed by PT Anugerah Megah Perkasa.
       </p>
     </section>
 
@@ -72,17 +72,17 @@ import ImageCarousel from '~/components/ImageCarousel.vue'
 import CTABanner from '~/components/CTABanner.vue'
 
 useSeoMeta({
-  title: 'DURABUILD Silicone Sealants & Technical Data Sheets (TDS)',
-  description: 'Download TDS technical specifications and view color options for DURABUILD one-component neutral silicone weather-resistant sealants in Indonesia.',
-  ogTitle: 'DURABUILD Silicone Sealant Catalog & Technical Data (TDS)',
-  ogDescription: 'One-component moisture cure silicone sealant for doors, windows, glass, and aluminum. Density 1.50 g/cm³, 38 Shore A.',
+  title: 'Product Specifications & Technical Data Sheets (TDS) — PT Anugerah Megah Perkasa',
+  description: 'Download TDS technical specifications and view color options for high-performance silicone sealants and construction supporting materials in Indonesia.',
+  ogTitle: 'Silicone Sealant Catalog & Technical Data (TDS) — PT Anugerah Megah Perkasa',
+  ogDescription: 'One-component moisture cure silicone sealants for doors, windows, glass, and aluminum curtain walls. Density 1.50 g/cm³, 38 Shore A.',
   ogImage: 'https://anugrah-megahperkasa.com/og-image.png',
   ogUrl: 'https://anugrah-megahperkasa.com/products',
   twitterCard: 'summary_large_image',
 })
 
 useHead({
-  title: 'DURABUILD Product Showcase & Technical Documentation',
+  title: 'Product Specifications & Technical Documentation — PT Anugerah Megah Perkasa',
   link: [
     { rel: 'canonical', href: 'https://anugrah-megahperkasa.com/products' },
   ],
@@ -111,7 +111,7 @@ useHead({
           availability: 'https://schema.org/InStock',
           seller: {
             '@type': 'Organization',
-            name: 'PT Anugrah Megah Perkasa',
+            name: 'PT Anugerah Megah Perkasa',
           },
         },
         additionalProperty: [

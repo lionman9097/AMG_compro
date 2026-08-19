@@ -11,18 +11,41 @@ export interface CompanyLocation {
   isPrimary?: boolean
 }
 
+export interface StrategicPillar {
+  title: string
+  description: string
+  icon: string
+}
+
+export interface ClientSegment {
+  title: string
+  description: string
+  icon: string
+}
+
+export interface BrandPartner {
+  name: string
+  logo: string
+  description: string
+}
+
 export interface CompanyInfo {
   name: string
   brand: string
+  brandPartners: BrandPartner[]
   tagline: string
   shortDescription: string
   description: string
   founded: number
   stats: { label: string; value: number; suffix: string }[]
-  mission: string
-  vision: string
-  values: { title: string; description: string; icon: string }[]
-  milestones: { year: number; title: string; description: string }[]
+  commitment: {
+    title: string
+    pillars: string[]
+    statement: string
+    tagline: string
+  }
+  pillars: StrategicPillar[]
+  clientSegments: ClientSegment[]
   contact: {
     address: string
     phone: string
@@ -33,48 +56,79 @@ export interface CompanyInfo {
 }
 
 export const company: CompanyInfo = {
-  name: 'PT Anugrah Megah Perkasa',
-  brand: 'DURABUILD',
-  tagline: 'Built to Seal. Built to Last.',
-  shortDescription: 'Official distributor of DURABUILD high-performance neutral and acetic silicone sealants for construction, door/window glazing, and industrial manufacturing.',
-  description: 'PT Anugrah Megah Perkasa is a premier distributor of DURABUILD industrial silicone sealants and weather-resistant adhesive solutions. Founded with a commitment to engineering excellence, we supply one-component neutral moisture-cure silicones, high-temperature adhesives, and specialty anti-fungal formulations to major construction contractors, door/window fabricators, facade specialists, and manufacturing plants across Indonesia and the Asia-Pacific.',
+  name: 'PT Anugerah Megah Perkasa',
+  brand: 'Wacker & DURABUILD',
+  brandPartners: [
+    {
+      name: 'WACKER',
+      logo: '/logo2.png',
+      description: 'Global pioneer in silicone and chemical innovations, providing industry-leading quality and specialized performance.',
+    },
+    {
+      name: 'DURABUILD',
+      logo: '/logo3.png',
+      description: 'High-performance neutral and acetic silicone sealants engineered for construction, glazing, and industrial applications.',
+    },
+  ],
+  tagline: 'Trusted Partner for Quality Sealant Solutions',
+  shortDescription: 'Distributor of sealant products and construction supporting materials, providing high-quality products to meet the needs of various construction, industrial, and building projects.',
+  description: 'ANUGERAH MEGAH PERKASA is a company engaged as a distributor of sealant products and construction supporting materials, providing high-quality products to meet the needs of various construction, industrial, and building projects. As a distributor of Wacker and Durabuild, we are committed to delivering products with trusted quality, optimal performance, and suitability for professional field applications. By prioritizing product quality, service excellence, product availability, and customer satisfaction, Anugerah Megah Perkasa continues to build long-term relationships with contractors, applicators, building material stores, developers, and other customers.',
   founded: 2008,
   stats: [
-    { label: 'Years of Engineering Bonds', value: 18, suffix: '+' },
+    { label: 'Years of Experience', value: 18, suffix: '+' },
+    { label: 'Strategic Warehouse Hubs', value: 4, suffix: '' },
     { label: 'Substrate Compatibility', value: 95, suffix: '%' },
-    { label: 'Extrudability Speed (g/5s)', value: 62, suffix: '' },
     { label: 'Thermal Resistance Range', value: 300, suffix: '°C' },
   ],
-  mission: 'To deliver world-class DURABUILD silicone sealant solutions that provide uncompromised weather protection, high elasticity, and long-lasting structural adhesion for every building and product.',
-  vision: 'To be the most trusted and reliable silicone sealant supplier in Southeast Asia, renowned for technical accuracy, stringent quality standards, and dedicated client support.',
-  values: [
+  commitment: {
+    title: 'Our Commitment',
+    pillars: ['Quality', 'Reliability', 'Professional Service'],
+    statement: 'We believe that quality products must be supported by professional service. Therefore, we are ready to be your trusted partner in providing sealant solutions and construction needs.',
+    tagline: 'Trusted Partner for Quality Sealant Solutions',
+  },
+  pillars: [
     {
-      title: 'Weather & UV Resistance',
-      description: 'DURABUILD formulations withstand extreme UV radiation, temperature shifts (-40°C to +150°C), and harsh outdoor exposure.',
-      icon: 'Shield',
-    },
-    {
-      title: 'Technical Rigor (TDS Verified)',
-      description: 'Every batch is tested for density (1.50 g/cm³), shore hardness (38 Shore A), and adhesion pass rates (≥95%).',
-      icon: 'FlaskConical',
-    },
-    {
-      title: 'High Elasticity & Adhesion',
-      description: 'Superior displacement deformation recovery and multi-substrate bonding for glass, tiles, aluminum, and metals.',
-      icon: 'Award',
-    },
-    {
-      title: 'Safety & Environmental Standards',
-      description: 'Controlled ketoxime release during cure with zero toxic side effects after full curing.',
+      title: 'Product Quality',
+      description: 'Supplying proven silicone sealants and construction materials that deliver optimal durability and meet strict field application standards.',
       icon: 'ShieldCheck',
     },
+    {
+      title: 'Service Excellence',
+      description: 'Delivering responsive consultation, technical guidance, and reliable client support at every stage of the project.',
+      icon: 'Headphones',
+    },
+    {
+      title: 'Product Availability',
+      description: 'Ensuring stable warehouse stock and efficient logistics so your construction and fabrication timelines run uninterrupted.',
+      icon: 'Boxes',
+    },
+    {
+      title: 'Customer Satisfaction',
+      description: 'Building enduring commercial relationships through dependable fulfillment, transparent communication, and genuine value.',
+      icon: 'Smile',
+    },
   ],
-  milestones: [
-    { year: 2008, title: 'Company Foundation', description: 'PT Anugrah Megah Perkasa established as a specialist distributor for industrial adhesives.' },
-    { year: 2012, title: 'DURABUILD Partnership', description: 'Secured official distribution partnership for DURABUILD Neutral and Acetic silicone sealant lines.' },
-    { year: 2016, title: 'Facade & Glazing Division', description: 'Expanded supply chain to major curtain wall and aluminum door/window fabrication projects.' },
-    { year: 2019, title: 'ISO 9001 Certification', description: 'Achieved ISO 9001 quality management system standards for sealant warehousing and distribution.' },
-    { year: 2023, title: 'Nationwide Logistics Network', description: 'Established 6 regional distribution hubs supporting over 2,500 commercial and industrial clients.' },
+  clientSegments: [
+    {
+      title: 'Contractors',
+      description: 'General and specialized building contractors requiring certified sealants for major commercial and residential developments.',
+      icon: 'Building2',
+    },
+    {
+      title: 'Applicators',
+      description: 'Professional glazing, facade, and sealant applicators needing consistent workability, rapid cure, and high bond strength.',
+      icon: 'Wrench',
+    },
+    {
+      title: 'Building Material Stores',
+      description: 'Retail and wholesale building supply stores looking for high-demand, trusted sealant products with fast restocking.',
+      icon: 'Store',
+    },
+    {
+      title: 'Developers & Industrial',
+      description: 'Real estate developers and manufacturing facilities looking for long-term weatherproofing and high-temperature sealing reliability.',
+      icon: 'Factory',
+    },
   ],
   contact: {
     address: 'Jl. Daan Mogot No.121B, RT.006/RW.005, Duri Kepa, Kec. Kebun Jeruk, Kota Jakarta Barat , DKI Jakarta 11510',

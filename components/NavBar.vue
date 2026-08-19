@@ -6,7 +6,7 @@
       :class="scrolled ? 'bg-white/95 border-zinc-200/90 shadow-[0_12px_40px_rgba(0,0,0,0.12)]' : 'bg-white/85 border-zinc-200/70 hover:shadow-[0_10px_35px_rgba(0,0,0,0.1)]'"
     >
       <NuxtLink to="/" class="flex items-center gap-1.5 shrink-0">
-        <img src="/logo1.png" alt="PT Anugrah Megah Perkasa Logo" class="max-h-5 sm:max-h-6 w-auto object-contain drop-shadow-[0_2px_6px_rgba(0,0,0,0.25)] hover:drop-shadow-[0_4px_10px_rgba(0,0,0,0.35)] transition-all duration-200" />
+        <img src="/logo1.png" alt="PT Anugerah Megah Perkasa Logo" class="max-h-5 sm:max-h-6 w-auto object-contain drop-shadow-[0_2px_6px_rgba(0,0,0,0.25)] hover:drop-shadow-[0_4px_10px_rgba(0,0,0,0.35)] transition-all duration-200" />
       </NuxtLink>
 
       <div class="hidden sm:flex items-center gap-6">

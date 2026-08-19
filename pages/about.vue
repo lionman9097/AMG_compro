@@ -1,89 +1,353 @@
 <template>
-  <div>
-    <!-- Page header: Stat-Led -->
-    <section class="container-site pt-40 pb-16 md:pt-48 md:pb-20">
-      <div class="stat-figure text-zinc-900 tnum">
-        {{ company.founded }}
-      </div>
-      <h1 class="font-display text-2xl md:text-3xl text-zinc-900 mt-4 mb-4 tracking-tight">
-        About PT Anugrah Megah Perkasa
-      </h1>
-      <p class="text-zinc-500 text-lg max-w-2xl leading-relaxed">
-        {{ company.shortDescription }}
-      </p>
-    </section>
+  <div class="bg-[var(--color-paper)] text-[var(--color-ink)] min-h-screen">
+    <!-- Header: Modern-Minimal Statement with Technical Authority -->
+    <section class="container-site pt-24 pb-14 md:pt-22 md:pb-16 border-b border-zinc-200">
+      <div class="max-w-3xl">
+        <!-- 3-Logo Unified Lockup (Refined for Light Modern-Minimal Theme) -->
+        <div
+          class="mb-4 sm:mb-10 inline-flex flex-wrap items-center gap-2.5 sm:gap-3.5 px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-2xl bg-white/90 backdrop-blur-md border border-zinc-200/90 hover:border-zinc-300 shadow-[0_2px_14px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-all duration-300">
+          <!-- Main Company Brand -->
+          <div class="flex items-center justify-center">
+            <img src="/logo1.png" alt="PT Anugerah Megah Perkasa"
+              class="h-5 sm:h-6 md:h-7 w-auto object-contain drop-shadow-[0_2px_8px_rgba(0,163,255,0.25)]" />
+          </div>
 
-    <!-- Long Document: Company Story -->
-    <section class="container-site section-spacing border-t border-zinc-200">
-      <div class="max-w-2xl">
-        <h2 class="text-xs font-mono font-medium tracking-widest uppercase text-zinc-400 mb-6">01 · Our Story</h2>
+          <!-- Divider -->
+          <div class="hidden sm:block w-px h-6 bg-zinc-200" />
 
-        <p class="text-[15px] text-zinc-600 leading-relaxed mb-5">{{ company.description }}</p>
+          <!-- 2 Child / Partner Logos -->
+          <div class="flex items-center gap-2 sm:gap-2.5">
+            <span
+              class="text-[10px] sm:text-[11px] text-zinc-500 font-mono tracking-wider uppercase font-medium leading-none">
+              Authorized Distributor & Partner of
+            </span>
 
-        <p class="text-[15px] text-zinc-600 leading-relaxed mb-5">
-          As the authorized supplier of DURABUILD products, we provide full technical datasheets (TDS), substrate compatibility testing, and application guidance for door and window glazing, aluminum curtain walls, structural joints, and extreme temperature industrial applications.
+            <!-- Child 1: DURABUILD -->
+            <div
+              class="h-6 sm:h-7 px-2 bg-zinc-950 rounded-lg border border-zinc-900 flex items-center shadow-xs hover:scale-105 transition-transform duration-200">
+              <img src="/logo3.png" alt="DURABUILD" class="h-4 sm:h-5 w-auto object-contain" />
+            </div>
+
+            <!-- Child 2: WACKER -->
+            <div
+              class="h-6 sm:h-7 px-2 bg-white rounded-lg border border-zinc-200/90 flex items-center shadow-xs hover:scale-105 transition-transform duration-200">
+              <img src="/logo2.png" alt="WACKER" class="h-4 sm:h-5 w-auto object-contain" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Display Heading -->
+        <h1
+          class="font-display text-4xl sm:text-5xl md:text-6xl font-semibold text-zinc-900 tracking-tight leading-[1.08] mb-5">
+          PT <span class="text-cobalt-accent">Anugerah</span> Megah Perkasa
+        </h1>
+
+        <!-- Slogan / Sub-heading -->
+        <p class="font-display text-xl sm:text-2xl text-zinc-800 font-medium mb-6 leading-snug">
+          {{ company.tagline }}
         </p>
 
-        <!-- Milestones as prose -->
-        <div class="mt-12 space-y-4">
-          <div v-for="milestone in company.milestones" :key="milestone.year" class="flex gap-6">
-            <span class="text-xs font-mono text-zinc-400 w-10 shrink-0 pt-0.5">{{ milestone.year }}</span>
-            <div>
-              <h3 class="text-sm font-semibold text-zinc-900">{{ milestone.title }}</h3>
-              <p class="text-sm text-zinc-500">{{ milestone.description }}</p>
+        <!-- Lead Narrative Paragraph -->
+        <p class="text-zinc-600 text-base sm:text-lg leading-relaxed max-w-2xl">
+          {{ company.shortDescription }}
+        </p>
+      </div>
+    </section>
+
+    <!-- 01 · Company Overview (Long Document Prose & Scope) -->
+    <section class="container-site section-spacing border-b border-zinc-200">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+        <div class="lg:col-span-4">
+          <span class="text-xs font-mono font-semibold tracking-widest uppercase text-cobalt-accent">01 &middot;
+            Overview</span>
+          <h2 class="font-display text-2xl sm:text-3xl font-semibold text-zinc-900 mt-2 tracking-tight">
+            Who We Are
+          </h2>
+          <p class="text-zinc-400 text-xs font-mono mt-3 uppercase tracking-wider">
+            Industrial &bull; Commercial &bull; Facade
+          </p>
+        </div>
+
+        <div class="lg:col-span-8 max-w-2xl space-y-6 text-zinc-700 leading-relaxed text-[15px] sm:text-base">
+          <p class="text-zinc-900 font-medium text-lg leading-relaxed">
+            <strong class="text-zinc-900">ANUGERAH MEGAH PERKASA</strong> is a company engaged as a distributor of
+            sealant products and construction supporting materials, providing high-quality products to meet the needs of
+            various construction, industrial, and building projects.
+          </p>
+
+          <p>
+            As a specialized distributor, we bridge international polymer technology with domestic construction demands.
+            Our catalog encompasses neutral moisture-cure silicones, acetoxy formulations, high-temperature adhesives,
+            and anti-fungal sanitary sealants engineered for long-term weatherproofing, UV resistance, and structural
+            elasticity.
+          </p>
+
+          <!-- Spec Table for Company Scope -->
+          <div class="mt-8 border border-zinc-200 rounded-xl overflow-hidden bg-white">
+            <div
+              class="px-5 py-3 bg-zinc-50 border-b border-zinc-200 flex items-center justify-between text-xs font-mono">
+              <span class="font-semibold text-zinc-800 uppercase tracking-wider">Distribution Scope Summary</span>
+              <span class="text-zinc-400">Spec Ref: ID-DIST-2026</span>
+            </div>
+            <div class="divide-y divide-zinc-200/70 text-xs sm:text-sm">
+              <div class="grid grid-cols-3 sm:grid-cols-4 px-5 py-3">
+                <span class="text-zinc-500 font-mono">Core Products</span>
+                <span class="col-span-2 sm:col-span-3 text-zinc-900 font-medium">Neutral Silicone, Acetic Silicone,
+                  High-Temp 300&deg;C, Sanitary Anti-Fungal</span>
+              </div>
+              <div class="grid grid-cols-3 sm:grid-cols-4 px-5 py-3">
+                <span class="text-zinc-500 font-mono">Brand Partners</span>
+                <span class="col-span-2 sm:col-span-3 text-zinc-900 font-medium">WACKER &bull; DURABUILD</span>
+              </div>
+              <div class="grid grid-cols-3 sm:grid-cols-4 px-5 py-3">
+                <span class="text-zinc-500 font-mono">Key Substrates</span>
+                <span class="col-span-2 sm:col-span-3 text-zinc-700">Glass, Aluminum Profiles, Glazed Ceramic Tiles,
+                  Concrete &amp; Masonry, Stainless Steel</span>
+              </div>
+              <div class="grid grid-cols-3 sm:grid-cols-4 px-5 py-3">
+                <span class="text-zinc-500 font-mono">Supply Coverage</span>
+                <span class="col-span-2 sm:col-span-3 text-zinc-700">Nationwide network with regional warehousing in
+                  Jakarta, Bekasi, Surabaya, and Semarang</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Mission & Vision as prose -->
-    <section class="container-site section-spacing border-t border-zinc-200">
-      <div class="max-w-2xl">
-        <h2 class="text-xs font-mono font-medium tracking-widest uppercase text-zinc-400 mb-6">02 · Purpose</h2>
+    <!-- 02 · Authorized Brand Distribution -->
+    <section class="container-site section-spacing border-b border-zinc-200">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+        <div class="lg:col-span-4">
+          <span class="text-xs font-mono font-semibold tracking-widest uppercase text-cobalt-accent">02 &middot;
+            Partnerships</span>
+          <h2 class="font-display text-2xl sm:text-3xl font-semibold text-zinc-900 mt-2 tracking-tight">
+            Authorized Brands
+          </h2>
+          <p class="text-zinc-500 text-sm mt-3 leading-relaxed">
+            Delivering products with trusted quality, optimal performance, and suitability for professional field
+            applications.
+          </p>
+        </div>
 
-        <h3 class="font-display text-lg text-zinc-900 mb-3">Our Mission</h3>
-        <p class="text-[15px] text-zinc-600 leading-relaxed mb-8">{{ company.mission }}</p>
+        <div class="lg:col-span-8 space-y-6">
+          <p class="text-zinc-800 text-base sm:text-lg leading-relaxed">
+            As a distributor of <strong class="text-zinc-900 font-semibold">Wacker</strong> and <strong
+              class="text-zinc-900 font-semibold">Durabuild</strong>, we are committed to delivering products with
+            trusted quality, optimal performance, and suitability for professional field applications.
+          </p>
 
-        <h3 class="font-display text-lg text-zinc-900 mb-3">Our Vision</h3>
-        <p class="text-[15px] text-zinc-600 leading-relaxed">{{ company.vision }}</p>
-      </div>
-    </section>
+          <!-- Technical Diptych for the 2 Brands -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+            <!-- WACKER Spec Block -->
+            <div class="p-6 rounded-xl border border-zinc-200 bg-white flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between pb-4 mb-4 border-b border-zinc-100">
+                  <img src="/logo2.png" alt="WACKER" class="h-6 w-auto object-contain" />
+                  <span class="text-[11px] font-mono uppercase px-2 py-0.5 rounded bg-zinc-100 text-zinc-600">Global
+                    Leader</span>
+                </div>
+                <h3 class="font-display text-lg font-semibold text-zinc-900 mb-2">WACKER Polymer Solutions</h3>
+                <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed mb-4">
+                  Internationally renowned chemical and silicone manufacturer delivering world-class polymer
+                  engineering, extreme weathering durability, and precision formulations.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-zinc-100">
+                <ul class="text-xs text-zinc-500 space-y-1 font-mono">
+                  <li>&bull; Premium silicone technology</li>
+                  <li>&bull; Strict international QA standards</li>
+                  <li>&bull; Professional applicator confidence</li>
+                </ul>
+              </div>
+            </div>
 
-    <!-- Core Values as prose list -->
-    <section class="container-site section-spacing border-t border-zinc-200">
-      <div class="max-w-2xl">
-        <h2 class="text-xs font-mono font-medium tracking-widest uppercase text-zinc-400 mb-6">03 · Values</h2>
-
-        <div class="space-y-6">
-          <div v-for="value in company.values" :key="value.title">
-            <h3 class="text-sm font-semibold text-zinc-900 mb-1">{{ value.title }}</h3>
-            <p class="text-sm text-zinc-500 leading-relaxed">{{ value.description }}</p>
+            <!-- DURABUILD Spec Block -->
+            <div class="p-6 rounded-xl border border-zinc-200 bg-white flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between pb-4 mb-4 border-b border-zinc-100">
+                  <img src="/logo3.png" alt="DURABUILD" class="h-6 w-auto object-contain" />
+                  <span class="text-[11px] font-mono uppercase px-2 py-0.5 rounded bg-zinc-900 text-white">Built to
+                    Last</span>
+                </div>
+                <h3 class="font-display text-lg font-semibold text-zinc-900 mb-2">DURABUILD Silicone Series</h3>
+                <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed mb-4">
+                  Specialized neutral and acetic moisture-cure silicone sealants built specifically for aluminum curtain
+                  walls, window glazing, joints, and high-temp industrial environments.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-zinc-100">
+                <ul class="text-xs text-zinc-500 space-y-1 font-mono">
+                  <li>&bull; 1.50 g/cm&sup3; density &bull; 38 Shore A</li>
+                  <li>&bull; Non-corrosive neutral moisture cure</li>
+                  <li>&bull; -40&deg;C to +150&deg;C / 300&deg;C tolerance</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- 03 · Core Strategic Priorities (Tabular Rationale) -->
+    <section class="container-site section-spacing border-b border-zinc-200">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 mb-8">
+        <div class="lg:col-span-4">
+          <span class="text-xs font-mono font-semibold tracking-widest uppercase text-cobalt-accent">03 &middot;
+            Priorities</span>
+          <h2 class="font-display text-2xl sm:text-3xl font-semibold text-zinc-900 mt-2 tracking-tight">
+            Strategic Pillars
+          </h2>
+        </div>
+        <div class="lg:col-span-8">
+          <p class="text-zinc-700 text-base leading-relaxed">
+            By prioritizing <strong class="text-zinc-900">product quality</strong>, <strong
+              class="text-zinc-900">service excellence</strong>, <strong class="text-zinc-900">product
+              availability</strong>, and <strong class="text-zinc-900">customer satisfaction</strong>, Anugerah Megah
+            Perkasa continues to build long-term relationships across the industry.
+          </p>
+        </div>
+      </div>
+
+      <!-- Tabular List of the 4 Pillars -->
+      <div class="border border-zinc-200 rounded-xl divide-y divide-zinc-200 bg-white">
+        <div v-for="(pillar, index) in company.pillars" :key="pillar.title"
+          class="p-6 grid grid-cols-1 md:grid-cols-12 gap-4 items-baseline hover:bg-zinc-50/50 transition-colors">
+          <div class="md:col-span-1 text-xs font-mono text-cobalt-accent font-semibold">
+            0{{ index + 1 }}
+          </div>
+          <div class="md:col-span-4">
+            <h3 class="font-display text-base font-semibold text-zinc-900">
+              {{ pillar.title }}
+            </h3>
+          </div>
+          <div class="md:col-span-7 text-xs sm:text-sm text-zinc-600 leading-relaxed">
+            {{ pillar.description }}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 · Our Commitment Statement -->
+    <section class="container-site section-spacing border-b border-zinc-200">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+        <div class="lg:col-span-4">
+          <span class="text-xs font-mono font-semibold tracking-widest uppercase text-cobalt-accent">04 &middot;
+            Promise</span>
+          <h2 class="font-display text-2xl sm:text-3xl font-semibold text-zinc-900 mt-2 tracking-tight">
+            Our Commitment
+          </h2>
+          <p class="text-zinc-500 text-sm mt-3 leading-relaxed">
+            The guiding philosophy governing our customer and contractor relationships.
+          </p>
+        </div>
+
+        <div class="lg:col-span-8">
+          <div class="p-8 sm:p-10 rounded-2xl bg-zinc-900 text-white border border-zinc-800 shadow-md">
+            <div class="text-xs font-mono text-cobalt-accent uppercase tracking-widest mb-4">
+              Pillars of Commitment
+            </div>
+            <div class="font-display text-2xl sm:text-3xl font-semibold tracking-tight text-white mb-6">
+              Quality &bull; Reliability &bull; Professional Service
+            </div>
+            <p class="text-zinc-300 text-base sm:text-lg leading-relaxed mb-8 max-w-xl">
+              &ldquo;We believe that quality products must be supported by professional service. Therefore, we are ready
+              to be your trusted partner in providing sealant solutions and construction needs.&rdquo;
+            </p>
+            <div class="pt-6 border-t border-zinc-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <p class="font-display text-sm font-semibold text-white tracking-wide uppercase">
+                  PT ANUGERAH MEGAH PERKASA
+                </p>
+                <p class="text-xs text-zinc-400 font-mono">
+                  Trusted Partner for Quality Sealant Solutions
+                </p>
+              </div>
+              <NuxtLink to="/contact" class="pill-cta-primary !bg-white !text-zinc-900 hover:!bg-zinc-100 text-xs">
+                Inquire &amp; Partner
+              </NuxtLink>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 · Client Ecosystem (Who We Serve) -->
+    <section class="container-site section-spacing border-b border-zinc-200">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 mb-8">
+        <div class="lg:col-span-4">
+          <span class="text-xs font-mono font-semibold tracking-widest uppercase text-cobalt-accent">05 &middot;
+            Ecosystem</span>
+          <h2 class="font-display text-2xl sm:text-3xl font-semibold text-zinc-900 mt-2 tracking-tight">
+            Who We Serve
+          </h2>
+        </div>
+        <div class="lg:col-span-8">
+          <p class="text-zinc-700 text-base leading-relaxed">
+            Anugerah Megah Perkasa continues to build long-term relationships with a diverse range of industry partners
+            across Indonesia.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4 Structured Segment Rows -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div v-for="segment in company.clientSegments" :key="segment.title"
+          class="p-5 rounded-xl border border-zinc-200 bg-white flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-mono text-zinc-400 uppercase tracking-widest mb-1.5">Segment</div>
+            <h3 class="font-display text-base font-semibold text-zinc-900 mb-2">
+              {{ segment.title }}
+            </h3>
+            <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed">
+              {{ segment.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 · Nationwide Distribution Network (Regional Hubs) -->
+    <section class="container-site section-spacing">
+      <div class="max-w-3xl mb-10">
+        <span class="text-xs font-mono font-semibold tracking-widest uppercase text-cobalt-accent">06 &middot;
+          Network</span>
+        <h2 class="font-display text-2xl sm:text-3xl font-semibold text-zinc-900 mt-2 tracking-tight">
+          Regional Distribution Hubs
+        </h2>
+        <p class="text-zinc-600 text-sm sm:text-base mt-2 leading-relaxed">
+          Operating direct branch offices and warehouse hubs to provide swift supply and on-site support across Java and
+          nationwide.
+        </p>
+      </div>
+
+      <CompanyInfo />
+    </section>
+
+    <!-- CTA Section -->
     <CTABanner />
   </div>
 </template>
 
 <script setup lang="ts">
 import { company } from '~/data/company'
+import CompanyInfo from '~/components/CompanyInfo.vue'
 import CTABanner from '~/components/CTABanner.vue'
 
 useSeoMeta({
-  title: 'About Us — PT Anugrah Megah Perkasa | DURABUILD Distributor',
-  description: 'Learn about PT Anugrah Megah Perkasa, Indonesia’s trusted distributor of DURABUILD industrial silicone sealants and weather-resistant adhesives since 2008.',
-  ogTitle: 'About PT Anugrah Megah Perkasa — Industrial Silicone Sealants',
-  ogDescription: 'Established in 2008, PT Anugrah Megah Perkasa supplies certified DURABUILD silicone sealants and adhesives across Indonesia.',
+  title: 'About Us — PT Anugerah Megah Perkasa | WACKER & DURABUILD Distributor',
+  description: 'Learn about PT Anugerah Megah Perkasa, authorized distributor of Wacker and Durabuild sealant products and construction supporting materials in Indonesia.',
+  ogTitle: 'About PT Anugerah Megah Perkasa — Trusted Partner for Quality Sealant Solutions',
+  ogDescription: 'Authorized distributor of WACKER and DURABUILD high-performance sealants for construction, industrial, and building projects.',
   ogImage: 'https://anugrah-megahperkasa.com/og-image.png',
   ogUrl: 'https://anugrah-megahperkasa.com/about',
   twitterCard: 'summary_large_image',
+  twitterTitle: 'About PT Anugerah Megah Perkasa — Wacker & DURABUILD Distributor',
+  twitterDescription: 'Trusted Partner for Quality Sealant Solutions — Distributing Wacker and Durabuild in Indonesia.',
 })
 
 useHead({
-  title: 'About Us — PT Anugrah Megah Perkasa',
+  title: 'About Us — PT Anugerah Megah Perkasa',
   link: [
     { rel: 'canonical', href: 'https://anugrah-megahperkasa.com/about' },
   ],
@@ -93,14 +357,20 @@ useHead({
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'AboutPage',
-        name: 'About PT Anugrah Megah Perkasa',
+        name: 'About PT Anugerah Megah Perkasa',
         description: company.description,
         url: 'https://anugrah-megahperkasa.com/about',
         mainEntity: {
           '@type': 'Organization',
           name: company.name,
+          alternateName: ['PT AMP', 'Anugerah Megah Perkasa'],
           foundingDate: `${company.founded}`,
           description: company.shortDescription,
+          slogan: company.tagline,
+          brand: [
+            { '@type': 'Brand', name: 'WACKER' },
+            { '@type': 'Brand', name: 'DURABUILD' },
+          ],
         },
       }),
     },
