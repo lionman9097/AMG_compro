@@ -86,22 +86,39 @@
       </div>
     </div>
 
-    <!-- LIGHTBOX / INSPECT MODAL -->
-    <div v-if="isLightboxOpen"
-      class="fixed inset-0 z-50 bg-zinc-950/95 backdrop-blur-xl flex flex-col items-center justify-center p-4 animate-fadeIn"
-      @click="isLightboxOpen = false">
+    <!-- LIGHTBOX / INSPECT MODAL (Viewport-Fit, No Scrolling) -->
+    <div
+      v-if="isLightboxOpen"
+      class="fixed inset-0 z-50 bg-zinc-950/95 backdrop-blur-xl flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 overflow-hidden animate-fadeIn select-none"
+      @click="isLightboxOpen = false"
+    >
+      <!-- Close Button -->
       <button
-        class="absolute top-6 right-6 p-2 rounded-full bg-zinc-900 hover:bg-zinc-800 text-white border border-zinc-700 transition-colors"
-        @click="isLightboxOpen = false">
-        <X class="w-6 h-6" />
+        class="absolute top-4 right-4 sm:top-6 sm:right-6 z-20 p-2.5 rounded-full bg-zinc-900/90 hover:bg-zinc-800 text-white border border-zinc-700/80 transition-colors shadow-lg"
+        @click="isLightboxOpen = false"
+        aria-label="Close lightbox"
+      >
+        <X class="w-5 h-5 sm:w-6 sm:h-6" />
       </button>
 
-      <div class="max-w-5xl max-h-[90vh] overflow-auto p-2" @click.stop>
-        <img :src="currentSlide.src" :alt="currentSlide.title"
-          class="max-w-full max-h-[85vh] object-contain rounded-xl mx-auto shadow-2xl" />
-        <div class="text-center mt-4 text-white">
-          <h4 class="font-display text-lg font-semibold">{{ currentSlide.title }}</h4>
-          <p class="text-xs text-zinc-400 mt-1">{{ currentSlide.caption }}</p>
+      <!-- Stage Container (flex column fitting within max 90dvh) -->
+      <div
+        class="relative w-full max-w-5xl h-full max-h-[88dvh] flex flex-col items-center justify-center min-h-0"
+        @click.stop
+      >
+        <!-- Auto-scaling Image Area -->
+        <div class="flex-1 w-full min-h-0 flex items-center justify-center overflow-hidden">
+          <img
+            :src="currentSlide.src"
+            :alt="currentSlide.title"
+            class="w-auto h-auto max-w-full max-h-full object-contain rounded-xl shadow-2xl"
+          />
+        </div>
+
+        <!-- Caption Below Image -->
+        <div class="text-center mt-3 sm:mt-4 text-white shrink-0 px-4 max-w-2xl">
+          <h4 class="font-display text-base sm:text-lg font-semibold tracking-tight">{{ currentSlide.title }}</h4>
+          <p class="text-[11px] sm:text-xs text-zinc-400 mt-0.5 sm:mt-1 line-clamp-2 leading-relaxed">{{ currentSlide.caption }}</p>
         </div>
       </div>
     </div>

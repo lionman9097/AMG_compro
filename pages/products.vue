@@ -18,9 +18,6 @@
     <!-- MAIN FEATURE: IMAGE CAROUSEL SECTION -->
     <section class="container-site pb-20 md:pb-24 border-t border-zinc-200/80 pt-6">
       <div class="mb-6 flex items-center justify-between">
-        <h2 class="text-xs font-mono text-zinc-400 uppercase tracking-wider">
-          Visual Catalog &amp; High-Res Inspection
-        </h2>
         <span class="hidden sm:inline-block text-xs font-mono text-zinc-400">
           Click "Inspect Image" for full high-res view
         </span>
