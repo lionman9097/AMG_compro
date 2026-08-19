@@ -172,8 +172,8 @@
                 </div>
                 <h3 class="font-display text-lg font-semibold text-zinc-900 mb-2">DURABUILD Silicone Series</h3>
                 <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed mb-4">
-                  Specialized neutral and acetic moisture-cure silicone sealants built specifically for aluminum curtain
-                  walls, window glazing, joints, and high-temp industrial environments.
+                  High-performance neutral moisture-cure silicone sealants engineered specifically for aluminum curtain
+                  walls, doors, windows, glass, and building envelope weatherproofing.
                 </p>
               </div>
               <div class="pt-4 border-t border-zinc-100">
@@ -364,7 +364,6 @@ useHead({
           '@type': 'Organization',
           name: company.name,
           alternateName: ['PT AMP', 'Anugerah Megah Perkasa'],
-          foundingDate: `${company.founded}`,
           description: company.shortDescription,
           slogan: company.tagline,
           brand: [

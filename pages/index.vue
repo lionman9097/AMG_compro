@@ -40,7 +40,6 @@ useHead({
         logo: 'https://anugrah-megahperkasa.com/logo1.png',
         image: 'https://anugrah-megahperkasa.com/og-image.png',
         description: company.description,
-        foundingDate: `${company.founded}`,
         address: {
           '@type': 'PostalAddress',
           streetAddress: company.contact.address,

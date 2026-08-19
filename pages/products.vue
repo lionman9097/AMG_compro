@@ -9,7 +9,9 @@
         Product Specifications &amp; Technical Datasheets
       </h1>
       <p class="text-zinc-600 text-base md:text-lg max-w-2xl leading-relaxed">
-        Explore authentic product specifications, technical data sheets (TDS), color options, and application standards for high-performance silicone sealants and construction supporting materials distributed by PT Anugerah Megah Perkasa.
+        Explore authentic product specifications, technical data sheets (TDS), color options, and application standards
+        for high-performance silicone sealants and construction supporting materials distributed by PT Anugerah Megah
+        Perkasa.
       </p>
     </section>
 
@@ -28,38 +30,42 @@
       <ImageCarousel />
     </section>
 
-    <!-- TECHNICAL SPECIFICATIONS & APPLICATION OVERVIEW -->
+    <!-- FULL INTERACTIVE PRODUCT CATALOG WITH EXPANDABLE TDS DRAWERS -->
     <section class="container-site border-t border-zinc-200 py-16">
-      <div class="max-w-3xl">
-        <h2 class="text-xs font-mono text-zinc-400 uppercase tracking-widest block mb-2">
-          Technical Summary &amp; Datasheet (TDS)
-        </h2>
-        <h3 class="font-display text-2xl text-zinc-900 font-semibold mb-4 tracking-tight">
-          DURABUILD Neutral Silicone Weather Resistant Adhesive
-        </h3>
-        <p class="text-zinc-600 text-sm md:text-base leading-relaxed mb-6">
-          DURABUILD is a one-component moisture-cure silicone weather-resistant adhesive engineered for high-durability bonding across doors, windows, glass, tiles, and aluminum curtain wall structures.
-        </p>
-
-        <!-- Quick Spec Grid -->
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 p-5 rounded-2xl bg-zinc-50 border border-zinc-200 text-xs font-mono">
-          <div>
-            <span class="text-zinc-400 uppercase block mb-1">Density</span>
-            <span class="text-zinc-900 font-bold text-sm">1.50 g/cm³</span>
-          </div>
-          <div>
-            <span class="text-zinc-400 uppercase block mb-1">Extrudability</span>
-            <span class="text-zinc-900 font-bold text-sm">62 g / 5s</span>
-          </div>
-          <div>
-            <span class="text-zinc-400 uppercase block mb-1">Surface Dry</span>
-            <span class="text-zinc-900 font-bold text-sm">22 min</span>
-          </div>
-          <div>
-            <span class="text-zinc-400 uppercase block mb-1">Hardness</span>
-            <span class="text-zinc-900 font-bold text-sm">38 Shore A</span>
-          </div>
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+        <div>
+          <span class="text-xs font-mono text-cobalt-accent font-semibold uppercase tracking-widest block mb-2">
+            Catalog &bull; TDS Specifications
+          </span>
+          <h2 class="font-display text-2xl sm:text-3xl text-zinc-900 font-semibold tracking-tight">
+            Product Catalog
+          </h2>
+          <p class="text-zinc-500 text-sm mt-1 max-w-xl">
+            Click on any product row to view detailed technical parameters.
+          </p>
         </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="flex items-center gap-1.5 flex-wrap">
+          <button class="px-3.5 py-1.5 rounded-full text-xs font-mono font-medium transition-colors border" :class="selectedCategory === null
+            ? 'bg-zinc-900 text-white border-zinc-900 shadow-xs'
+            : 'bg-white text-zinc-600 border-zinc-200 hover:border-zinc-300 hover:text-zinc-900'"
+            @click="selectedCategory = null">
+            All ({{ products.length }})
+          </button>
+          <button v-for="cat in productCategories" :key="cat.id"
+            class="px-3.5 py-1.5 rounded-full text-xs font-mono font-medium transition-colors border" :class="selectedCategory === cat.id
+              ? 'bg-zinc-900 text-white border-zinc-900 shadow-xs'
+              : 'bg-white text-zinc-600 border-zinc-200 hover:border-zinc-300 hover:text-zinc-900'"
+            @click="selectedCategory = cat.id">
+            {{ cat.label }}
+          </button>
+        </div>
+      </div>
+
+      <!-- Product Cards List -->
+      <div class="border-t border-zinc-200">
+        <ProductCard v-for="product in filteredProducts" :key="product.id" :product="product" />
       </div>
     </section>
 
@@ -68,8 +74,18 @@
 </template>
 
 <script setup lang="ts">
+import { ref, computed } from 'vue'
 import ImageCarousel from '~/components/ImageCarousel.vue'
+import ProductCard from '~/components/ProductCard.vue'
 import CTABanner from '~/components/CTABanner.vue'
+import { products, productCategories } from '~/data/products'
+
+const selectedCategory = ref<string | null>(null)
+
+const filteredProducts = computed(() => {
+  if (!selectedCategory.value) return products
+  return products.filter(p => p.category === selectedCategory.value)
+})
 
 useSeoMeta({
   title: 'Product Specifications & Technical Data Sheets (TDS) — PT Anugerah Megah Perkasa',
@@ -91,36 +107,20 @@ useHead({
       type: 'application/ld+json',
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
-        '@type': 'Product',
-        name: 'DURABUILD Neutral Silicone Weather Resistant Adhesive',
-        image: [
-          'https://anugrah-megahperkasa.com/durabuild_main.webp',
-          'https://anugrah-megahperkasa.com/technical.webp',
-        ],
-        description: 'DURABUILD Neutral silicone weather resistant adhesive is a one component moisture cure silicone for doors, windows, glass, and aluminum surfaces.',
-        brand: {
-          '@type': 'Brand',
-          name: 'DURABUILD',
-        },
-        category: 'Building Adhesives & Sealants',
-        material: 'Neutral Moisture-Cure Silicone',
-        color: ['Black', 'White', 'Transparent', 'Brown'],
-        offers: {
-          '@type': 'AggregateOffer',
-          priceCurrency: 'IDR',
-          availability: 'https://schema.org/InStock',
-          seller: {
-            '@type': 'Organization',
-            name: 'PT Anugerah Megah Perkasa',
+        '@type': 'ItemList',
+        name: 'Silicone Sealant Product Catalog',
+        description: 'High-performance silicone sealants distributed by PT Anugerah Megah Perkasa',
+        itemListElement: products.map((prod, index) => ({
+          '@type': 'Product',
+          position: index + 1,
+          name: prod.name,
+          description: prod.description,
+          brand: {
+            '@type': 'Brand',
+            name: prod.brand,
           },
-        },
-        additionalProperty: [
-          { '@type': 'PropertyValue', name: 'Density', value: '1.50 g/cm³' },
-          { '@type': 'PropertyValue', name: 'Hardness', value: '38 Shore A' },
-          { '@type': 'PropertyValue', name: 'Surface Dry Time', value: '22 minutes' },
-          { '@type': 'PropertyValue', name: 'Curing Rate', value: '2.0 mm / 24H' },
-          { '@type': 'PropertyValue', name: 'Packaging', value: '300ml Cartridge, 600ml Sausage' },
-        ],
+          category: prod.category,
+        })),
       }),
     },
   ],

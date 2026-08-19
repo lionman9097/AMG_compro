@@ -36,7 +36,6 @@ export interface CompanyInfo {
   tagline: string
   shortDescription: string
   description: string
-  founded: number
   stats: { label: string; value: number; suffix: string }[]
   commitment: {
     title: string
@@ -73,12 +72,11 @@ export const company: CompanyInfo = {
   tagline: 'Trusted Partner for Quality Sealant Solutions',
   shortDescription: 'Distributor of sealant products and construction supporting materials, providing high-quality products to meet the needs of various construction, industrial, and building projects.',
   description: 'ANUGERAH MEGAH PERKASA is a company engaged as a distributor of sealant products and construction supporting materials, providing high-quality products to meet the needs of various construction, industrial, and building projects. As a distributor of Wacker and Durabuild, we are committed to delivering products with trusted quality, optimal performance, and suitability for professional field applications. By prioritizing product quality, service excellence, product availability, and customer satisfaction, Anugerah Megah Perkasa continues to build long-term relationships with contractors, applicators, building material stores, developers, and other customers.',
-  founded: 2008,
   stats: [
-    { label: 'Years of Experience', value: 18, suffix: '+' },
+    { label: 'Authorized Brand Partners', value: 2, suffix: '' },
     { label: 'Strategic Warehouse Hubs', value: 4, suffix: '' },
-    { label: 'Substrate Compatibility', value: 95, suffix: '%' },
-    { label: 'Thermal Resistance Range', value: 300, suffix: '°C' },
+    { label: 'Core Strategic Priorities', value: 4, suffix: '' },
+    { label: 'Client Ecosystem Segments', value: 4, suffix: '' },
   ],
   commitment: {
     title: 'Our Commitment',
@@ -126,7 +124,7 @@ export const company: CompanyInfo = {
     },
     {
       title: 'Developers & Industrial',
-      description: 'Real estate developers and manufacturing facilities looking for long-term weatherproofing and high-temperature sealing reliability.',
+      description: 'Real estate developers and manufacturing facilities looking for long-term weatherproofing and sealing reliability.',
       icon: 'Factory',
     },
   ],

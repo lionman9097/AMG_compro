@@ -4,7 +4,7 @@
       <SectionHeader
         numeral="01"
         title="Product Categories"
-        subtitle="Four classes of silicone sealant, each engineered for specific application environments."
+        subtitle="High-performance silicone sealants from authorized partners DURABUILD and WACKER, engineered for professional field applications."
       />
 
       <div class="mt-14 md:mt-18">
@@ -41,33 +41,21 @@
 </template>
 
 <script setup lang="ts">
-import { ArrowRight, FlaskConical, Shield, Flame, Sparkles } from '@lucide/vue'
+import { ArrowRight, FlaskConical, Shield } from '@lucide/vue'
 import SectionHeader from '~/components/SectionHeader.vue'
 
 const categories = [
   {
-    id: 'acetic-cure',
-    label: 'Acetic Cure Sealants',
-    description: 'Fast-curing acetoxy silicone for glass, ceramics, and general construction. Excellent adhesion and quick tack-free time.',
-    icon: FlaskConical,
-  },
-  {
     id: 'neutral-cure',
-    label: 'Neutral Cure Sealants',
-    description: 'Non-corrosive oxime and alkoxy silicones for metal, concrete, and coated surfaces. Ideal for weather sealing and expansion joints.',
+    label: 'Neutral Cure Weatherproofing (DURABUILD)',
+    description: 'One-component moisture cure silicone weather resistant adhesive for doors, windows, glass, and aluminum curtain wall assemblies.',
     icon: Shield,
   },
   {
-    id: 'high-temp',
-    label: 'High Temperature',
-    description: 'Specialized formulations that withstand extreme heat from 300\u00b0C to 1200\u00b0C, including fire-rated options.',
-    icon: Flame,
-  },
-  {
-    id: 'specialty',
-    label: 'Specialty Solutions',
-    description: 'Anti-fungal, UV-resistant, and application-specific formulations for unique industrial requirements.',
-    icon: Sparkles,
+    id: 'acetic-cure',
+    label: 'General Purpose Acetic Silicone (WACKER® GP)',
+    description: 'Fast-curing acetoxy silicone rubber with 800 g/min extrusion rate and 520% elongation for window glazing, stainless sash, and plumbing.',
+    icon: FlaskConical,
   },
 ]
 </script>
