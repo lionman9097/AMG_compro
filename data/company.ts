@@ -73,10 +73,10 @@ export const company: CompanyInfo = {
   shortDescription: 'Distributor of sealant products and construction supporting materials, providing high-quality products to meet the needs of various construction, industrial, and building projects.',
   description: 'ANUGERAH MEGAH PERKASA is a company engaged as a distributor of sealant products and construction supporting materials, providing high-quality products to meet the needs of various construction, industrial, and building projects. As a distributor of Wacker and Durabuild, we are committed to delivering products with trusted quality, optimal performance, and suitability for professional field applications. By prioritizing product quality, service excellence, product availability, and customer satisfaction, Anugerah Megah Perkasa continues to build long-term relationships with contractors, applicators, building material stores, developers, and other customers.',
   stats: [
-    { label: 'Authorized Brand Partners', value: 2, suffix: '' },
-    { label: 'Strategic Warehouse Hubs', value: 4, suffix: '' },
-    { label: 'Core Strategic Priorities', value: 4, suffix: '' },
-    { label: 'Client Ecosystem Segments', value: 4, suffix: '' },
+    { label: 'Authorized Brand Partners', value: 2, suffix: '+' },
+    { label: 'Strategic Warehouse Hubs', value: 4, suffix: '+' },
+    { label: 'Core Strategic Priorities', value: 4, suffix: '+' },
+    { label: 'Client Ecosystem Segments', value: 4, suffix: '+' },
   ],
   commitment: {
     title: 'Our Commitment',
