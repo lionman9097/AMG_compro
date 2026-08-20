@@ -95,8 +95,11 @@
         <!-- Section 3: Application Methods & Substrates -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <!-- Application Areas -->
-          <div v-if="product.applicationAreas && product.applicationAreas.length"
-            class="bg-white p-4 rounded-xl border border-zinc-200">
+          <div
+            v-if="product.applicationAreas && product.applicationAreas.length"
+            class="bg-white p-4 rounded-xl border border-zinc-200"
+            :class="(!product.colors || product.colors.length === 0) && (!product.packaging || product.packaging.length === 0) ? 'md:col-span-2' : ''"
+          >
             <h4
               class="font-display font-semibold text-zinc-900 text-xs tracking-wider uppercase mb-2 flex items-center gap-2">
               <Layers class="w-4 h-4 text-cobalt-accent" />
@@ -110,14 +113,17 @@
             </ul>
           </div>
 
-          <!-- Color & Packaging -->
-          <div class="bg-white p-4 rounded-xl border border-zinc-200 space-y-3">
+          <!-- Color & Packaging (Only if data exists) -->
+          <div
+            v-if="(product.colors && product.colors.length > 0) || (product.packaging && product.packaging.length > 0)"
+            class="bg-white p-4 rounded-xl border border-zinc-200 space-y-3"
+          >
             <h4
               class="font-display font-semibold text-zinc-900 text-xs tracking-wider uppercase flex items-center gap-2">
               <Box class="w-4 h-4 text-cobalt-accent" />
               Color & Package Formats
             </h4>
-            <div class="text-xs">
+            <div v-if="product.colors && product.colors.length > 0" class="text-xs">
               <span class="text-zinc-400 uppercase font-mono text-[10px] tracking-wider block mb-1">Available
                 Colors</span>
               <div class="flex flex-wrap gap-1.5">
@@ -127,7 +133,7 @@
                 </span>
               </div>
             </div>
-            <div class="text-xs">
+            <div v-if="product.packaging && product.packaging.length > 0" class="text-xs">
               <span class="text-zinc-400 uppercase font-mono text-[10px] tracking-wider block mb-1">Package Size</span>
               <div class="flex flex-wrap gap-1.5">
                 <span v-for="p in product.packaging" :key="p"
@@ -135,6 +141,20 @@
                   {{ p }}
                 </span>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 4: Application Instructions -->
+        <div v-if="product.applicationMethods && product.applicationMethods.length" class="bg-white p-4 rounded-xl border border-zinc-200">
+          <h4 class="font-display font-semibold text-zinc-900 text-xs tracking-wider uppercase mb-3 flex items-center gap-2">
+            <Wrench class="w-4 h-4 text-cobalt-accent" />
+            Application Instructions (How to Use)
+          </h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+            <div v-for="step in product.applicationMethods" :key="step.step" class="p-3 rounded-lg bg-zinc-50 border border-zinc-200/60">
+              <span class="font-mono text-xs text-cobalt-accent font-bold block mb-0.5">STEP {{ step.step }}: {{ step.title.toUpperCase() }}</span>
+              <p class="text-zinc-600 leading-relaxed text-[11px]">{{ step.description }}</p>
             </div>
           </div>
         </div>
@@ -147,8 +167,12 @@
             <AlertTriangle class="w-4 h-4 text-amber-600" />
             Storage & Safety Attention
           </h4>
-          <p><strong class="font-semibold">Storage Period:</strong> {{ product.storageSafety.storagePeriod }} — {{
-            product.storageSafety.storageConditions }}</p>
+          <p>
+            <template v-if="product.storageSafety.storagePeriod && product.storageSafety.storagePeriod !== '-'">
+              <strong class="font-semibold">Storage Period:</strong> {{ product.storageSafety.storagePeriod }} — 
+            </template>
+            <strong class="font-semibold">Storage:</strong> {{ product.storageSafety.storageConditions }}
+          </p>
           <ul class="list-disc list-inside space-y-1 text-[11px] text-amber-800">
             <li v-for="(note, i) in product.storageSafety.attention" :key="i">{{ note }}</li>
           </ul>
@@ -180,8 +204,7 @@ const isExpanded = ref(false)
 const categoryLabels: Record<string, string> = {
   'acetic-cure': 'Acetic Cure',
   'neutral-cure': 'Neutral Cure',
-  'high-temp': 'High Temperature',
-  'specialty': 'Specialty',
+  'multipurpose': 'Multipurpose & Adhesive',
 }
 
 const categoryLabel = computed(() => categoryLabels[props.product.category] || props.product.category)

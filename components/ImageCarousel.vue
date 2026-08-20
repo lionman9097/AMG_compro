@@ -52,7 +52,7 @@
     <!-- THUMBNAILS & SLIDE INDICATORS STRIP -->
     <div class="mt-5 flex flex-col sm:flex-row items-center justify-between gap-4">
       <!-- Thumbnail Selector Cards -->
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 w-full sm:w-auto flex-1">
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 w-full sm:w-auto flex-1">
         <button v-for="(slide, idx) in slides" :key="slide.id"
           class="p-2 sm:p-3 rounded-2xl border text-left transition-all duration-200 flex items-center gap-3 relative overflow-hidden group"
           :class="currentIndex === idx
@@ -170,6 +170,14 @@ const slides: ImageSlide[] = [
     shortTitle: 'WACKER® GP Series',
     tag: 'WACKER PARTNER PRODUCT',
     caption: 'One-part acetoxy silicone sealant for window glazing, stainless sash, and plumbing joints with 800 g/min extrusion rate.',
+  },
+  {
+    id: 'slide-super-shield',
+    src: '/super_shield_broschure.webp',
+    title: 'SUPER SHIELD — Premium Sealant & Adhesive',
+    shortTitle: 'SUPER SHIELD',
+    tag: 'PREMIUM SEALANT & ADHESIVE',
+    caption: 'Oil-free multipurpose protective sealant with high strength bond for construction, roofing, gutters, glass, and ACP panels.',
   },
 ]
 

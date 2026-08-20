@@ -15,7 +15,7 @@ export interface Product {
   name: string
   brand: string
   tagline: string
-  category: 'neutral-cure' | 'acetic-cure'
+  category: 'neutral-cure' | 'acetic-cure' | 'multipurpose'
   description: string
   specs: {
     temperatureRange: string
@@ -43,6 +43,7 @@ export interface Product {
 export const productCategories = [
   { id: 'neutral-cure', label: 'Neutral Cure', icon: 'Shield' as const },
   { id: 'acetic-cure', label: 'Acetic Cure', icon: 'FlaskConical' as const },
+  { id: 'multipurpose', label: 'Multipurpose & Adhesive', icon: 'Sparkles' as const },
 ]
 
 export const products: Product[] = [
@@ -178,6 +179,73 @@ export const products: Product[] = [
         'Releases small amount of acetic acid vapor during curing; ensure good room ventilation.',
         'Avoid prolonged skin and eye contact. In case of contact, rinse immediately with water.',
         'Fully cured silicone rubber is chemically inert, flexible, and non-toxic.',
+      ],
+    },
+  },
+  {
+    id: 'super-shield',
+    name: 'SUPER SHIELD Premium Sealant & Adhesive',
+    brand: 'SUPER SHIELD',
+    tagline: 'STRONG • WEATHERSHIELD • MULTIPURPOSE',
+    category: 'multipurpose',
+    description: 'SUPER SHIELD Sealant is a high quality multipurpose protective sealant designed to provide maximum bonding strength and protection against water, heat, and extreme weather.',
+    specs: {
+      temperatureRange: '-',
+      cureType: 'Oil Free Multipurpose Protective',
+      color: '-',
+      application: 'Glass & Aluminum joints, construction, roofing & gutters, DIY & industrial, ACP',
+      density: '-',
+      hardness: '-',
+      tackFreeTime: '+/- 10 min (Skin Over)',
+      curingSpeed: '24h (Full Cure)',
+    },
+    characters: [
+      'Oil Free formulation',
+      'High strength bond for maximum adhesion',
+      'Water & extreme weather resistant (Weathershield protection)',
+      'Crack-proof & flexible formulation',
+      'Suitable for both interior & exterior applications',
+      'Eco friendly & quality assured',
+    ],
+    applicationAreas: [
+      'Glass & Aluminum joints',
+      'Construction',
+      'Roofing & Gutters',
+      'DIY & Industrial Projects',
+      'ACP (Aluminum Composite Panel)',
+    ],
+    tds: [],
+    applicationMethods: [
+      {
+        step: 1,
+        title: 'Surface Cleaning',
+        description: 'Clean surface from dust & grease.',
+      },
+      {
+        step: 2,
+        title: 'Nozzle Preparation',
+        description: 'Cut nozzle tip as needed.',
+      },
+      {
+        step: 3,
+        title: 'Application',
+        description: 'Apply sealant evenly.',
+      },
+      {
+        step: 4,
+        title: 'Tooling & Finishing',
+        description: 'Smooth before curing.',
+      },
+    ],
+    colors: [],
+    packaging: [],
+    storageSafety: {
+      storagePeriod: '-',
+      storageConditions: 'Store in a cool & dry place. Keep away from direct sunlight.',
+      attention: [
+        'Keep out of reach of children.',
+        'Avoid direct contact with eyes.',
+        'Use in well ventilated area.',
       ],
     },
   },

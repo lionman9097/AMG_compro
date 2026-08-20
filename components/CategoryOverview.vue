@@ -4,7 +4,7 @@
       <SectionHeader
         numeral="01"
         title="Product Categories"
-        subtitle="High-performance silicone sealants from authorized partners DURABUILD and WACKER, engineered for professional field applications."
+        subtitle="High-performance silicone sealants and adhesives from authorized partners, engineered for professional field applications."
       />
 
       <div class="mt-14 md:mt-18">
@@ -41,7 +41,7 @@
 </template>
 
 <script setup lang="ts">
-import { ArrowRight, FlaskConical, Shield } from '@lucide/vue'
+import { ArrowRight, FlaskConical, Shield, Sparkles } from '@lucide/vue'
 import SectionHeader from '~/components/SectionHeader.vue'
 
 const categories = [
@@ -56,6 +56,12 @@ const categories = [
     label: 'General Purpose Acetic Silicone (WACKER® GP)',
     description: 'Fast-curing acetoxy silicone rubber with 800 g/min extrusion rate and 520% elongation for window glazing, stainless sash, and plumbing.',
     icon: FlaskConical,
+  },
+  {
+    id: 'multipurpose',
+    label: 'Multipurpose Premium Sealant & Adhesive (SUPER SHIELD)',
+    description: 'Oil-free multipurpose protective sealant with high strength bond for construction, roofing, gutters, glass, and ACP panels.',
+    icon: Sparkles,
   },
 ]
 </script>
