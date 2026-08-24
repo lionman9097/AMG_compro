@@ -66,7 +66,12 @@ export const company: CompanyInfo = {
     {
       name: 'DURABUILD',
       logo: '/logo3.png',
-      description: 'High-performance neutral and acetic silicone sealants engineered for construction, glazing, and industrial applications.',
+      description: 'High-performance neutral silicone sealants and weather-resistant adhesives engineered for construction, glazing, and industrial applications.',
+    },
+    {
+      name: 'SUPER SHIELD',
+      logo: '/supershield_logo.png',
+      description: 'Premium multipurpose protective sealants and high-strength adhesives engineered for construction, roofing, and weatherproofing.',
     },
   ],
   tagline: 'Trusted Partner for Quality Sealant Solutions',
@@ -153,9 +158,9 @@ export const company: CompanyInfo = {
       badge: 'Branch Office',
       city: 'Bekasi',
       address: 'Perumahan Bojong Menteng Indah Blok H.11 Jl. Kemuning Raya, Bojong Menteng, Kec. Rawalumbu, Kota Bekasi, Jawa Barat 17117',
-      whatsapp: '+62 858 9211 4782',
-      whatsappUrl: 'https://wa.me/6285892114782',
-      phone: '(021) 5660 147',
+      whatsapp: '+62 877 6956 9729',
+      whatsappUrl: 'https://wa.me/6287769569729',
+      phone: '-',
       phoneUrl: 'tel:+62215660147',
     },
     {

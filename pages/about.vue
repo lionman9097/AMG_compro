@@ -1,54 +1,61 @@
 <template>
   <div class="bg-[var(--color-paper)] text-[var(--color-ink)] min-h-screen">
-    <!-- Header: Modern-Minimal Statement with Technical Authority -->
-    <section class="container-site pt-24 pb-14 md:pt-22 md:pb-16 border-b border-zinc-200">
+    <!-- Page Header: Editorial Statement -->
+    <section class="container-site pt-28 pb-10 sm:pt-36 sm:pb-14 border-b border-zinc-200">
       <div class="max-w-3xl">
-        <!-- 3-Logo Unified Lockup (Refined for Light Modern-Minimal Theme) -->
+        <!-- Partner Lockup Badge: AMG + Authorized Brands -->
         <div
-          class="mb-4 sm:mb-10 inline-flex flex-wrap items-center gap-2.5 sm:gap-3.5 px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-2xl bg-white/90 backdrop-blur-md border border-zinc-200/90 hover:border-zinc-300 shadow-[0_2px_14px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.06)] transition-all duration-300">
+          class="mb-6 inline-flex flex-wrap items-center gap-2 sm:gap-3 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl bg-zinc-50 border border-zinc-200/80 shadow-xs">
           <!-- Main Company Brand -->
           <div class="flex items-center justify-center">
-            <img src="/logo1.png" alt="PT Anugerah Megah Perkasa"
-              class="h-5 sm:h-6 md:h-7 w-auto object-contain drop-shadow-[0_2px_8px_rgba(0,163,255,0.25)]" />
+            <img src="/logo1.png" alt="PT Anugerah Megah Perkasa" class="h-5 sm:h-6 w-auto object-contain" />
           </div>
 
           <!-- Divider -->
-          <div class="hidden sm:block w-px h-6 bg-zinc-200" />
+          <div class=" w-px h-5 sm:h-6 bg-zinc-200" />
 
-          <!-- 2 Child / Partner Logos -->
-          <div class="flex items-center gap-2 sm:gap-2.5">
+          <!-- Child Partner Logos -->
+          <div class="flex items-center gap-1.5 sm:gap-2 flex-wrap">
             <span
-              class="text-[10px] sm:text-[11px] text-zinc-500 font-mono tracking-wider uppercase font-medium leading-none">
+              class="hidden sm:block text-[10px] sm:text-[11px] text-zinc-500 font-mono tracking-wider uppercase font-medium leading-none">
               Authorized Distributor & Partner of
             </span>
 
             <!-- Child 1: DURABUILD -->
             <div
-              class="h-6 sm:h-7 px-2 bg-zinc-950 rounded-lg border border-zinc-900 flex items-center shadow-xs hover:scale-105 transition-transform duration-200">
+              class="h-6 sm:h-7 px-2 bg-zinc-950 rounded-lg border border-zinc-900 flex items-center shadow-xs hover:scale-105 transition-transform duration-200"
+              title="DURABUILD">
               <img src="/logo3.png" alt="DURABUILD" class="h-4 sm:h-5 w-auto object-contain" />
             </div>
 
             <!-- Child 2: WACKER -->
             <div
-              class="h-6 sm:h-7 px-2 bg-white rounded-lg border border-zinc-200/90 flex items-center shadow-xs hover:scale-105 transition-transform duration-200">
+              class="h-6 sm:h-7 px-2 bg-white rounded-lg border border-zinc-200/90 flex items-center shadow-xs hover:scale-105 transition-transform duration-200"
+              title="WACKER">
               <img src="/logo2.png" alt="WACKER" class="h-4 sm:h-5 w-auto object-contain" />
+            </div>
+
+            <!-- Child 3: SUPER SHIELD -->
+            <div class="h-6 sm:h-8 px-2 flex items-center shadow-xs hover:scale-105 transition-transform duration-200"
+              title="SUPER SHIELD">
+              <img src="/supershield_logo.png" alt="SUPER SHIELD" class="h-8 sm:h-8 w-auto object-contain" />
             </div>
           </div>
         </div>
 
         <!-- Main Display Heading -->
         <h1
-          class="font-display text-4xl sm:text-5xl md:text-6xl font-semibold text-zinc-900 tracking-tight leading-[1.08] mb-5">
+          class="font-display text-3xl sm:text-5xl md:text-6xl font-semibold text-zinc-900 tracking-tight leading-[1.08] mb-4 sm:mb-5">
           PT <span class="text-cobalt-accent">Anugerah</span> Megah Perkasa
         </h1>
 
         <!-- Slogan / Sub-heading -->
-        <p class="font-display text-xl sm:text-2xl text-zinc-800 font-medium mb-6 leading-snug">
+        <p class="font-display text-lg sm:text-2xl text-zinc-800 font-medium mb-4 sm:mb-6 leading-snug">
           {{ company.tagline }}
         </p>
 
         <!-- Lead Narrative Paragraph -->
-        <p class="text-zinc-600 text-base sm:text-lg leading-relaxed max-w-2xl">
+        <p class="text-zinc-600 text-sm sm:text-lg leading-relaxed max-w-2xl">
           {{ company.shortDescription }}
         </p>
       </div>
@@ -69,7 +76,7 @@
         </div>
 
         <div class="lg:col-span-8 max-w-2xl space-y-6 text-zinc-700 leading-relaxed text-[15px] sm:text-base">
-          <p class="text-zinc-900 font-medium text-lg leading-relaxed">
+          <p class="text-zinc-900 font-medium text-base sm:text-lg leading-relaxed">
             <strong class="text-zinc-900">ANUGERAH MEGAH PERKASA</strong> is a company engaged as a distributor of
             sealant products and construction supporting materials, providing high-quality products to meet the needs of
             various construction, industrial, and building projects.
@@ -77,36 +84,38 @@
 
           <p>
             As a specialized distributor, we bridge international polymer technology with domestic construction demands.
-            Our catalog encompasses neutral moisture-cure silicones, acetoxy formulations, high-temperature adhesives,
-            and anti-fungal sanitary sealants engineered for long-term weatherproofing, UV resistance, and structural
+            Our catalog encompasses neutral moisture-cure silicones, general purpose neutral formulations, multipurpose
+            adhesives,
+            and specialized construction sealants engineered for long-term weatherproofing, UV resistance, and
+            structural
             elasticity.
           </p>
 
           <!-- Spec Table for Company Scope -->
           <div class="mt-8 border border-zinc-200 rounded-xl overflow-hidden bg-white">
             <div
-              class="px-5 py-3 bg-zinc-50 border-b border-zinc-200 flex items-center justify-between text-xs font-mono">
+              class="px-4 py-2.5 sm:px-5 sm:py-3 bg-zinc-50 border-b border-zinc-200 flex items-center justify-between text-xs font-mono">
               <span class="font-semibold text-zinc-800 uppercase tracking-wider">Distribution Scope Summary</span>
-              <span class="text-zinc-400">Spec Ref: ID-DIST-2026</span>
+              <span class="text-zinc-400 text-[10px] sm:text-xs">Spec Ref: ID-DIST-2026</span>
             </div>
             <div class="divide-y divide-zinc-200/70 text-xs sm:text-sm">
-              <div class="grid grid-cols-3 sm:grid-cols-4 px-5 py-3">
-                <span class="text-zinc-500 font-mono">Core Products</span>
-                <span class="col-span-2 sm:col-span-3 text-zinc-900 font-medium">Neutral Silicone, Acetic Silicone,
-                  High-Temp 300&deg;C, Sanitary Anti-Fungal</span>
+              <div class="flex flex-col sm:grid sm:grid-cols-4 px-4 py-2.5 sm:px-5 sm:py-3 gap-0.5 sm:gap-0">
+                <span class="text-zinc-500 font-mono text-[11px] sm:text-xs">Core Products</span>
+                <span class="sm:col-span-3 text-zinc-900 font-medium">Neutral Silicone, General Purpose
+                  Neutral, Multipurpose &amp; Adhesive</span>
               </div>
-              <div class="grid grid-cols-3 sm:grid-cols-4 px-5 py-3">
-                <span class="text-zinc-500 font-mono">Brand Partners</span>
-                <span class="col-span-2 sm:col-span-3 text-zinc-900 font-medium">WACKER &bull; DURABUILD</span>
+              <div class="flex flex-col sm:grid sm:grid-cols-4 px-4 py-2.5 sm:px-5 sm:py-3 gap-0.5 sm:gap-0">
+                <span class="text-zinc-500 font-mono text-[11px] sm:text-xs">Brand Partners</span>
+                <span class="sm:col-span-3 text-zinc-900 font-medium">WACKER &bull; DURABUILD &bull; SUPER SHIELD</span>
               </div>
-              <div class="grid grid-cols-3 sm:grid-cols-4 px-5 py-3">
-                <span class="text-zinc-500 font-mono">Key Substrates</span>
-                <span class="col-span-2 sm:col-span-3 text-zinc-700">Glass, Aluminum Profiles, Glazed Ceramic Tiles,
-                  Concrete &amp; Masonry, Stainless Steel</span>
+              <div class="flex flex-col sm:grid sm:grid-cols-4 px-4 py-2.5 sm:px-5 sm:py-3 gap-0.5 sm:gap-0">
+                <span class="text-zinc-500 font-mono text-[11px] sm:text-xs">Key Substrates</span>
+                <span class="sm:col-span-3 text-zinc-700">Glass, Aluminum Profiles, Glazed Ceramic Tiles,
+                  Concrete &amp; Masonry, Stainless Steel, ACP</span>
               </div>
-              <div class="grid grid-cols-3 sm:grid-cols-4 px-5 py-3">
-                <span class="text-zinc-500 font-mono">Supply Coverage</span>
-                <span class="col-span-2 sm:col-span-3 text-zinc-700">Nationwide network with regional warehousing in
+              <div class="flex flex-col sm:grid sm:grid-cols-4 px-4 py-2.5 sm:px-5 sm:py-3 gap-0.5 sm:gap-0">
+                <span class="text-zinc-500 font-mono text-[11px] sm:text-xs">Supply Coverage</span>
+                <span class="sm:col-span-3 text-zinc-700">Nationwide network with regional warehousing in
                   Jakarta, Bekasi, Surabaya, and Semarang</span>
               </div>
             </div>
@@ -132,55 +141,79 @@
 
         <div class="lg:col-span-8 space-y-6">
           <p class="text-zinc-800 text-base sm:text-lg leading-relaxed">
-            As a distributor of <strong class="text-zinc-900 font-semibold">Wacker</strong> and <strong
-              class="text-zinc-900 font-semibold">Durabuild</strong>, we are committed to delivering products with
+            As a distributor of <strong class="text-zinc-900 font-semibold">Wacker</strong>, <strong
+              class="text-zinc-900 font-semibold">Durabuild</strong>, and <strong
+              class="text-zinc-900 font-semibold">Super Shield</strong>, we are committed to delivering products with
             trusted quality, optimal performance, and suitability for professional field applications.
           </p>
 
-          <!-- Technical Diptych for the 2 Brands -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+          <!-- Technical Triptych for the 3 Brands -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5 pt-2">
             <!-- WACKER Spec Block -->
-            <div class="p-6 rounded-xl border border-zinc-200 bg-white flex flex-col justify-between">
+            <div class="p-5 rounded-xl border border-zinc-200 bg-white flex flex-col justify-between">
               <div>
-                <div class="flex items-center justify-between pb-4 mb-4 border-b border-zinc-100">
-                  <img src="/logo2.png" alt="WACKER" class="h-6 w-auto object-contain" />
-                  <span class="text-[11px] font-mono uppercase px-2 py-0.5 rounded bg-zinc-100 text-zinc-600">Global
+                <div class="flex items-center justify-between pt-4 pb-3 mb-3 border-b border-zinc-100">
+                  <img src="/logo2.png" alt="WACKER" class="h-5 w-auto object-contain" />
+                  <span class="text-[10px] font-mono uppercase px-1.5 py-0.5 rounded bg-zinc-100 text-zinc-600">Global
                     Leader</span>
                 </div>
-                <h3 class="font-display text-lg font-semibold text-zinc-900 mb-2">WACKER Polymer Solutions</h3>
-                <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed mb-4">
-                  Internationally renowned chemical and silicone manufacturer delivering world-class polymer
-                  engineering, extreme weathering durability, and precision formulations.
+                <h3 class="font-display text-base font-semibold text-zinc-900 mb-1.5">WACKER Solutions</h3>
+                <p class="text-xs text-zinc-600 leading-relaxed mb-3">
+                  German polymer engineering delivering extreme weathering durability and precision neutral
+                  formulations.
                 </p>
               </div>
-              <div class="pt-4 border-t border-zinc-100">
-                <ul class="text-xs text-zinc-500 space-y-1 font-mono">
-                  <li>&bull; Premium silicone technology</li>
-                  <li>&bull; Strict international QA standards</li>
-                  <li>&bull; Professional applicator confidence</li>
+              <div class="pt-3 border-t border-zinc-100">
+                <ul class="text-[11px] text-zinc-500 space-y-1 font-mono">
+                  <li>&bull; ISO 11600 G Class 20HM</li>
+                  <li>&bull; Strict international QA</li>
+                  <li>&bull; Primerless adhesion</li>
                 </ul>
               </div>
             </div>
 
             <!-- DURABUILD Spec Block -->
-            <div class="p-6 rounded-xl border border-zinc-200 bg-white flex flex-col justify-between">
+            <div class="p-5 rounded-xl border border-zinc-200 bg-white flex flex-col justify-between">
               <div>
-                <div class="flex items-center justify-between pb-4 mb-4 border-b border-zinc-100">
-                  <img src="/logo3.png" alt="DURABUILD" class="h-6 w-auto object-contain" />
-                  <span class="text-[11px] font-mono uppercase px-2 py-0.5 rounded bg-zinc-900 text-white">Built to
+                <div class="flex items-center justify-between pt-4 pb-3 mb-3 border-b border-zinc-100">
+                  <img src="/logo3.png" alt="DURABUILD" class="h-5 w-auto object-contain" />
+                  <span class="text-[10px] font-mono uppercase px-1.5 py-0.5 rounded bg-zinc-900 text-white">Built to
                     Last</span>
                 </div>
-                <h3 class="font-display text-lg font-semibold text-zinc-900 mb-2">DURABUILD Silicone Series</h3>
-                <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed mb-4">
-                  High-performance neutral moisture-cure silicone sealants engineered specifically for aluminum curtain
-                  walls, doors, windows, glass, and building envelope weatherproofing.
+                <h3 class="font-display text-base font-semibold text-zinc-900 mb-1.5">DURABUILD Series</h3>
+                <p class="text-xs text-zinc-600 leading-relaxed mb-3">
+                  High-performance neutral moisture-cure silicone sealants engineered for curtain walls, doors, and
+                  glazing.
                 </p>
               </div>
-              <div class="pt-4 border-t border-zinc-100">
-                <ul class="text-xs text-zinc-500 space-y-1 font-mono">
-                  <li>&bull; 1.50 g/cm&sup3; density &bull; 38 Shore A</li>
-                  <li>&bull; Non-corrosive neutral moisture cure</li>
-                  <li>&bull; -40&deg;C to +150&deg;C / 300&deg;C tolerance</li>
+              <div class="pt-3 border-t border-zinc-100">
+                <ul class="text-[11px] text-zinc-500 space-y-1 font-mono">
+                  <li>&bull; 1.50 g/cm&sup3; &bull; 38 Shore A</li>
+                  <li>&bull; Non-corrosive neutral cure</li>
+                  <li>&bull; -40&deg;C to +150&deg;C tolerance</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- SUPER SHIELD Spec Block -->
+            <div class="p-5 rounded-xl border border-zinc-200 bg-white flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between pb-3 mb-3 border-b border-zinc-100">
+                  <img src="/supershield_logo.png" alt="SUPER SHIELD" class="h-9 w-auto object-contain" />
+                  <span
+                    class="text-[10px] font-mono uppercase px-1.5 py-0.5 rounded bg-blue-50 text-cobalt-accent">Heavy
+                    Duty</span>
+                </div>
+                <h3 class="font-display text-base font-semibold text-zinc-900 mb-1.5">SUPER SHIELD</h3>
+                <p class="text-xs text-zinc-600 leading-relaxed mb-3">
+                  Oil-free multipurpose protective sealant with high strength bond for roofing, gutters, and ACP panels.
+                </p>
+              </div>
+              <div class="pt-3 border-t border-zinc-100">
+                <ul class="text-[11px] text-zinc-500 space-y-1 font-mono">
+                  <li>&bull; Oil-Free formulation</li>
+                  <li>&bull; Weathershield protection</li>
+                  <li>&bull; Crack-proof &amp; flexible</li>
                 </ul>
               </div>
             </div>
@@ -243,8 +276,8 @@
         </div>
 
         <div class="lg:col-span-8">
-          <div class="p-8 sm:p-10 rounded-2xl bg-zinc-900 text-white border border-zinc-800 shadow-md">
-            <div class="text-xs font-mono text-cobalt-accent uppercase tracking-widest mb-4">
+          <div class="p-5 sm:p-8 md:p-10 rounded-2xl bg-zinc-900 text-white border border-zinc-800 shadow-md">
+            <div class="text-xs font-mono text-cobalt-accent uppercase tracking-widest mb-3 sm:mb-4">
               Pillars of Commitment
             </div>
             <div class="font-display text-2xl sm:text-3xl font-semibold tracking-tight text-white mb-6">

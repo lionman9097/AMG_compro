@@ -17,7 +17,7 @@ export default defineNuxtConfig({
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: 'PT Anugerah Megah Perkasa is an authorized distributor of Wacker and Durabuild silicone sealants and construction supporting materials across Indonesia.' },
-        { name: 'keywords', content: 'silicone sealant, WACKER, DURABUILD, neutral silicone sealant, acetic silicone sealant, weather resistant adhesive, PT Anugerah Megah Perkasa, sealant supplier Indonesia, industrial adhesive, facade glazing silicone' },
+        { name: 'keywords', content: 'silicone sealant, WACKER, DURABUILD, WACKER GP-N, neutral silicone sealant, weather resistant adhesive, PT Anugerah Megah Perkasa, sealant supplier Indonesia, industrial adhesive, facade glazing silicone' },
         { name: 'author', content: 'PT Anugerah Megah Perkasa' },
         { name: 'apple-mobile-web-app-title', content: 'AMG' },
         

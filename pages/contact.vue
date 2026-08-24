@@ -1,14 +1,14 @@
 <template>
   <div>
     <!-- Page header -->
-    <section class="container-site pt-40 pb-16 md:pt-48 md:pb-20">
+    <section class="container-site pt-28 pb-10 sm:pt-36 sm:pb-14 md:pt-48 md:pb-20">
       <div class="stat-figure text-zinc-900 tnum">
         24<span class="text-cobalt-accent">h</span>
       </div>
-      <h1 class="font-display text-2xl md:text-3xl text-zinc-900 mt-4 mb-4 tracking-tight">
+      <h1 class="font-display text-2xl sm:text-3xl text-zinc-900 mt-3 sm:mt-4 mb-2 sm:mb-4 tracking-tight">
         Get in Touch
       </h1>
-      <p class="text-zinc-500 text-lg max-w-2xl leading-relaxed">
+      <p class="text-zinc-500 text-sm sm:text-base md:text-lg max-w-2xl leading-relaxed">
         Response within 24 hours. Our technical team is ready to help you find the perfect sealant for your development.
       </p>
     </section>

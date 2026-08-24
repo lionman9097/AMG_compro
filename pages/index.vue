@@ -12,7 +12,7 @@ import { company } from '~/data/company'
 
 useSeoMeta({
   title: 'PT Anugerah Megah Perkasa — Official Distributor of Wacker & Durabuild',
-  description: 'Official distributor of Wacker and Durabuild high-performance neutral and acetic silicone sealants, weather-resistant adhesives, and construction supporting materials.',
+  description: 'Official distributor of Wacker and Durabuild high-performance neutral silicone sealants, weather-resistant adhesives, and construction supporting materials.',
   ogTitle: 'PT Anugerah Megah Perkasa — Trusted Partner for Quality Sealant Solutions',
   ogDescription: 'Authorized distributor of WACKER and DURABUILD high-performance silicone sealants for construction, industrial, and building projects.',
   ogImage: 'https://anugrah-megahperkasa.com/og-image.png',

@@ -25,6 +25,10 @@
 }
 
 @layer base {
+  html, body {
+    overflow-x: clip;
+  }
+
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
@@ -40,6 +44,7 @@
   h1, h2, h3, h4, h5 {
     font-family: var(--font-display);
     letter-spacing: -0.03em;
+    overflow-wrap: anywhere;
   }
 
   ::selection {
@@ -50,11 +55,11 @@
 
 @layer components {
   .container-site {
-    @apply max-w-7xl mx-auto px-6 lg:px-8;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
   .section-spacing {
-    padding-block: clamp(5rem, 10vw, 9rem);
+    padding-block: clamp(3.5rem, 8vw, 8rem);
   }
 
   .stat-figure {

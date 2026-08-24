@@ -38,14 +38,14 @@
             :href="loc.whatsappUrl"
             target="_blank"
             rel="noopener noreferrer"
-            class="group flex items-center justify-between px-2.5 py-1.5 rounded-lg bg-emerald-50/70 hover:bg-emerald-100/80 border border-emerald-200/60 text-emerald-800 transition-colors duration-150"
+            class="group flex items-center justify-between px-2.5 py-1.5 rounded-lg bg-emerald-50/70 hover:bg-emerald-100/80 border border-emerald-200/60 text-emerald-800 transition-colors duration-150 gap-2"
             :title="`Chat on WhatsApp with ${loc.title}`"
           >
-            <span class="flex items-center gap-1.5 text-xs font-medium">
-              <MessageSquare class="w-3.5 h-3.5 text-emerald-600" />
+            <span class="flex items-center gap-1.5 text-[11px] sm:text-xs font-medium shrink-0">
+              <MessageSquare class="w-3.5 h-3.5 text-emerald-600 shrink-0" />
               <span>WhatsApp</span>
             </span>
-            <span class="text-xs font-mono text-emerald-700 font-medium group-hover:underline">
+            <span class="text-[11px] sm:text-xs font-mono text-emerald-700 font-medium group-hover:underline truncate">
               {{ loc.whatsapp }}
             </span>
           </a>
@@ -53,14 +53,14 @@
           <!-- Phone Link -->
           <a
             :href="loc.phoneUrl"
-            class="group flex items-center justify-between px-2.5 py-1.5 rounded-lg bg-zinc-50 hover:bg-zinc-100 border border-zinc-200/70 text-zinc-700 transition-colors duration-150"
+            class="group flex items-center justify-between px-2.5 py-1.5 rounded-lg bg-zinc-50 hover:bg-zinc-100 border border-zinc-200/70 text-zinc-700 transition-colors duration-150 gap-2"
             :title="`Call ${loc.title}`"
           >
-            <span class="flex items-center gap-1.5 text-xs font-medium">
-              <Phone class="w-3.5 h-3.5 text-zinc-500" />
+            <span class="flex items-center gap-1.5 text-[11px] sm:text-xs font-medium shrink-0">
+              <Phone class="w-3.5 h-3.5 text-zinc-500 shrink-0" />
               <span>Phone</span>
             </span>
-            <span class="text-xs font-mono text-zinc-600 font-medium group-hover:underline">
+            <span class="text-[11px] sm:text-xs font-mono text-zinc-600 font-medium group-hover:underline truncate">
               {{ loc.phone }}
             </span>
           </a>

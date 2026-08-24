@@ -1,14 +1,14 @@
 <template>
   <div>
     <!-- Page header: Stat-Led (Image Documents & Products) -->
-    <section class="container-site pt-36 pb-10 md:pt-44 md:pb-14">
+    <section class="container-site pt-28 pb-8 sm:pt-36 sm:pb-10 md:pt-44 md:pb-14">
       <div class="stat-figure text-zinc-900 tnum">
         Products
       </div>
-      <h1 class="font-display text-3xl md:text-4xl text-zinc-900 mt-4 mb-3 tracking-tight">
+      <h1 class="font-display text-2xl sm:text-3xl md:text-4xl text-zinc-900 mt-3 sm:mt-4 mb-2 sm:mb-3 tracking-tight">
         Product Specifications &amp; Technical Datasheets
       </h1>
-      <p class="text-zinc-600 text-base md:text-lg max-w-2xl leading-relaxed">
+      <p class="text-zinc-600 text-sm sm:text-base md:text-lg max-w-2xl leading-relaxed">
         Explore authentic product specifications, technical data sheets (TDS), color options, and application standards
         for high-performance silicone sealants and construction supporting materials distributed by PT Anugerah Megah
         Perkasa.
@@ -16,9 +16,9 @@
     </section>
 
     <!-- MAIN FEATURE: IMAGE CAROUSEL SECTION -->
-    <section class="container-site pb-20 md:pb-24 border-t border-zinc-200/80 pt-6">
-      <div class="mb-6 flex items-center justify-between">
-        <span class="hidden sm:inline-block text-xs font-mono text-zinc-400">
+    <section class="container-site pb-14 sm:pb-20 md:pb-24 border-t border-zinc-200/80 pt-4 sm:pt-6">
+      <div class="mb-4 sm:mb-6 flex items-center justify-between">
+        <span class="text-[11px] sm:text-xs font-mono text-zinc-400">
           Click "Inspect Image" for full high-res view
         </span>
       </div>
@@ -28,30 +28,30 @@
     </section>
 
     <!-- FULL INTERACTIVE PRODUCT CATALOG WITH EXPANDABLE TDS DRAWERS -->
-    <section class="container-site border-t border-zinc-200 py-16">
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+    <section class="container-site border-t border-zinc-200 py-12 sm:py-16">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 mb-8 sm:mb-10">
         <div>
-          <span class="text-xs font-mono text-cobalt-accent font-semibold uppercase tracking-widest block mb-2">
+          <span class="text-xs font-mono text-cobalt-accent font-semibold uppercase tracking-widest block mb-1.5 sm:mb-2">
             Catalog &bull; TDS Specifications
           </span>
           <h2 class="font-display text-2xl sm:text-3xl text-zinc-900 font-semibold tracking-tight">
             Product Catalog
           </h2>
-          <p class="text-zinc-500 text-sm mt-1 max-w-xl">
+          <p class="text-zinc-500 text-xs sm:text-sm mt-1 max-w-xl">
             Click on any product row to view detailed technical parameters.
           </p>
         </div>
 
         <!-- Category Filter Tabs -->
         <div class="flex items-center gap-1.5 flex-wrap">
-          <button class="px-3.5 py-1.5 rounded-full text-xs font-mono font-medium transition-colors border" :class="selectedCategory === null
+          <button class="px-3 py-1.5 sm:px-3.5 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-mono font-medium transition-colors border whitespace-nowrap" :class="selectedCategory === null
             ? 'bg-zinc-900 text-white border-zinc-900 shadow-xs'
             : 'bg-white text-zinc-600 border-zinc-200 hover:border-zinc-300 hover:text-zinc-900'"
             @click="selectedCategory = null">
             All ({{ products.length }})
           </button>
           <button v-for="cat in productCategories" :key="cat.id"
-            class="px-3.5 py-1.5 rounded-full text-xs font-mono font-medium transition-colors border" :class="selectedCategory === cat.id
+            class="px-3 py-1.5 sm:px-3.5 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-mono font-medium transition-colors border whitespace-nowrap" :class="selectedCategory === cat.id
               ? 'bg-zinc-900 text-white border-zinc-900 shadow-xs'
               : 'bg-white text-zinc-600 border-zinc-200 hover:border-zinc-300 hover:text-zinc-900'"
             @click="selectedCategory = cat.id">

@@ -68,28 +68,30 @@
         </div>
 
         <!-- Section 2: Technical Data Sheet (TDS Table) -->
-        <div v-if="product.tds && product.tds.length" class="overflow-x-auto">
+        <div v-if="product.tds && product.tds.length" class="overflow-x-auto -mx-1 sm:mx-0">
           <h4
             class="font-display font-semibold text-zinc-900 text-xs tracking-wider uppercase mb-3 flex items-center gap-2">
             <FileText class="w-4 h-4 text-cobalt-accent" />
             Technical Data Sheet (TDS)
           </h4>
-          <table class="w-full text-left text-xs border-collapse rounded-lg overflow-hidden border border-zinc-200">
-            <thead class="bg-zinc-900 text-white font-mono uppercase text-[10px] tracking-wider">
-              <tr>
-                <th class="py-2.5 px-3">Test Parameter</th>
-                <th class="py-2.5 px-3">Standard Requirement</th>
-                <th class="py-2.5 px-3">Test Result</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-zinc-200 bg-white">
-              <tr v-for="(row, i) in product.tds" :key="i" class="hover:bg-zinc-50/80">
-                <td class="py-2 px-3 font-medium text-zinc-900">{{ row.test }}</td>
-                <td class="py-2 px-3 text-zinc-600 font-mono">{{ row.standard }}</td>
-                <td class="py-2 px-3 font-semibold text-cobalt-accent font-mono">{{ row.result }}</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="overflow-x-auto rounded-lg border border-zinc-200">
+            <table class="w-full min-w-[380px] sm:min-w-[440px] text-left text-xs border-collapse">
+              <thead class="bg-zinc-900 text-white font-mono uppercase text-[10px] tracking-wider">
+                <tr>
+                  <th class="py-2.5 px-3">Test Parameter</th>
+                  <th class="py-2.5 px-3">Standard Requirement</th>
+                  <th class="py-2.5 px-3">Test Result</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-zinc-200 bg-white">
+                <tr v-for="(row, i) in product.tds" :key="i" class="hover:bg-zinc-50/80">
+                  <td class="py-2 px-3 font-medium text-zinc-900">{{ row.test }}</td>
+                  <td class="py-2 px-3 text-zinc-600 font-mono">{{ row.standard }}</td>
+                  <td class="py-2 px-3 font-semibold text-cobalt-accent font-mono">{{ row.result }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
         <!-- Section 3: Application Methods & Substrates -->
