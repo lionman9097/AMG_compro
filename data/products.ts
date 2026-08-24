@@ -188,7 +188,7 @@ export const products: Product[] = [
   },
   {
     id: 'super-shield',
-    name: 'SUPER SHIELD Premium Sealant & Adhesive',
+    name: 'SUPER SHIELD Non-oil Premium Sealant & Adhesive',
     brand: 'SUPER SHIELD',
     tagline: 'STRONG • WEATHERSHIELD • MULTIPURPOSE',
     category: 'multipurpose',
