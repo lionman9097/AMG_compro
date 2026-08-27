@@ -136,7 +136,7 @@ export const company: CompanyInfo = {
   contact: {
     address: 'Jl. Daan Mogot No.121B, RT.006/RW.005, Duri Kepa, Kec. Kebun Jeruk, Kota Jakarta Barat , DKI Jakarta 11510',
     phone: '(021) 5660 147',
-    email: '-',
+    email: 'admin@amperkasa.co.id',
     hours: 'Monday – Saturday: 8:00 AM – 5:00 PM',
   },
   locations: [
