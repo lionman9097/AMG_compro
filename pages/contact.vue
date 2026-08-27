@@ -40,19 +40,26 @@ import ContactForm from '~/components/ContactForm.vue'
 import CompanyInfo from '~/components/CompanyInfo.vue'
 
 useSeoMeta({
-  title: 'Contact PT Anugerah Megah Perkasa — Get a Silicone Sealant Quote',
-  description: 'Request a quote or technical consultation for Wacker & Durabuild silicone sealants and construction supporting materials from PT Anugerah Megah Perkasa.',
-  ogTitle: 'Contact PT Anugerah Megah Perkasa — Sealant Quotes & Consultation',
-  ogDescription: 'Get in touch with our technical team for silicone sealant pricing, TDS sheets, and delivery options across Indonesia.',
-  ogImage: 'https://anugrah-megahperkasa.com/og-image.png',
-  ogUrl: 'https://anugrah-megahperkasa.com/contact',
+  title: 'Contact Sealant Distributor Indonesia | AMP',
+  description: 'Contact PT Anugerah Megah Perkasa for sealant product information, technical advice, quotations, and distribution support across Indonesia.',
+  ogType: 'website',
+  ogSiteName: 'PT Anugerah Megah Perkasa',
+  ogTitle: 'Contact Sealant Distributor Indonesia | AMP',
+  ogDescription: 'Contact PT Anugerah Megah Perkasa for sealant product information, technical advice, quotations, and distribution support across Indonesia.',
+  ogImage: 'https://amperkasa.co.id/og-image.png',
+  ogImageAlt: 'PT Anugerah Megah Perkasa — Official Sealant Distributor',
+  ogUrl: 'https://amperkasa.co.id/contact',
   twitterCard: 'summary_large_image',
+  twitterTitle: 'Contact Sealant Distributor Indonesia | AMP',
+  twitterDescription: 'Contact PT Anugerah Megah Perkasa for sealant product information, technical advice, quotations, and distribution support across Indonesia.',
+  twitterImage: 'https://amperkasa.co.id/og-image.png',
+  robots: 'index, follow',
 })
 
 useHead({
-  title: 'Contact Us — PT Anugerah Megah Perkasa',
+  title: 'Contact Sealant Distributor Indonesia | AMP',
   link: [
-    { rel: 'canonical', href: 'https://anugrah-megahperkasa.com/contact' },
+    { rel: 'canonical', href: 'https://amperkasa.co.id/contact' },
   ],
   script: [
     {
@@ -61,11 +68,12 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'ContactPage',
         name: 'Contact PT Anugerah Megah Perkasa',
-        description: 'Get in touch with PT Anugerah Megah Perkasa for Wacker & Durabuild silicone sealant inquiries and quotes.',
-        url: 'https://anugrah-megahperkasa.com/contact',
+        description: 'Contact PT Anugerah Megah Perkasa for sealant product information, technical advice, quotations, and distribution support across Indonesia.',
+        url: 'https://amperkasa.co.id/contact',
         mainEntity: {
           '@type': 'Organization',
           name: company.name,
+          url: 'https://amperkasa.co.id/',
           telephone: company.contact.phone,
           email: company.contact.email,
           address: {
@@ -77,7 +85,7 @@ useHead({
           department: company.locations.map(loc => ({
             '@type': 'LocalBusiness',
             name: `${company.name} — ${loc.title}`,
-            telephone: loc.phone,
+            telephone: loc.phone !== '-' ? loc.phone : undefined,
             address: {
               '@type': 'PostalAddress',
               streetAddress: loc.address,

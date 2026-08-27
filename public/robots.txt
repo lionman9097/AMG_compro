@@ -1,7 +1,4 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
 
-# Host & Sitemap
-Host: https://anugrah-megahperkasa.com
-Sitemap: https://anugrah-megahperkasa.com/sitemap.xml
+Sitemap: https://amperkasa.co.id/sitemap.xml

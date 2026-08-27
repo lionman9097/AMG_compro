@@ -21,21 +21,25 @@ export default defineNuxtConfig({
         { name: 'author', content: 'PT Anugerah Megah Perkasa' },
         { name: 'apple-mobile-web-app-title', content: 'AMG' },
         
+        { name: 'robots', content: 'index, follow' },
+        
         // Open Graph / Facebook / WhatsApp
         { property: 'og:type', content: 'website' },
         { property: 'og:site_name', content: 'PT Anugerah Megah Perkasa' },
         { property: 'og:title', content: 'PT Anugerah Megah Perkasa — Trusted Partner for Quality Sealant Solutions' },
-        { property: 'og:description', content: 'Authorized distributor of Wacker and Durabuild sealant products and construction supporting materials for construction, industrial, and building projects.' },
-        { property: 'og:image', content: 'https://anugrah-megahperkasa.com/og-image.png' },
+        { property: 'og:description', content: 'Authorized distributor of WACKER, DURABUILD, and SUPER SHIELD sealant products and construction supporting materials for construction, industrial, and building projects across Indonesia.' },
+        { property: 'og:image', content: 'https://amperkasa.co.id/og-image.png' },
+        { property: 'og:image:alt', content: 'PT Anugerah Megah Perkasa — Official Sealant Distributor' },
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
         { property: 'og:locale', content: 'en_US' },
 
         // Twitter Cards
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'PT Anugerah Megah Perkasa — Wacker & Durabuild Distributor' },
-        { name: 'twitter:description', content: 'Official distributor of Wacker & Durabuild industrial silicone sealants and construction supporting materials in Indonesia.' },
-        { name: 'twitter:image', content: 'https://anugrah-megahperkasa.com/og-image.png' },
+        { name: 'twitter:title', content: 'PT Anugerah Megah Perkasa — Sealant Distributor Indonesia' },
+        { name: 'twitter:description', content: 'Official distributor of WACKER, DURABUILD, and SUPER SHIELD industrial silicone sealants and construction supporting materials in Indonesia.' },
+        { name: 'twitter:image', content: 'https://amperkasa.co.id/og-image.png' },
+        { name: 'twitter:image:alt', content: 'PT Anugerah Megah Perkasa — Official Sealant Distributor' },
       ],
       link: [
         { rel: 'icon', type: 'image/png', href: '/favicon-96x96.png', sizes: '96x96' },

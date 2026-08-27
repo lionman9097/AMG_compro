@@ -368,21 +368,26 @@ import CompanyInfo from '~/components/CompanyInfo.vue'
 import CTABanner from '~/components/CTABanner.vue'
 
 useSeoMeta({
-  title: 'About Us — PT Anugerah Megah Perkasa | WACKER & DURABUILD Distributor',
-  description: 'Learn about PT Anugerah Megah Perkasa, authorized distributor of Wacker and Durabuild sealant products and construction supporting materials in Indonesia.',
-  ogTitle: 'About PT Anugerah Megah Perkasa — Trusted Partner for Quality Sealant Solutions',
-  ogDescription: 'Authorized distributor of WACKER and DURABUILD high-performance sealants for construction, industrial, and building projects.',
-  ogImage: 'https://anugrah-megahperkasa.com/og-image.png',
-  ogUrl: 'https://anugrah-megahperkasa.com/about',
+  title: 'About PT Anugerah Megah Perkasa | Sealant Distributor',
+  description: 'Learn about PT Anugerah Megah Perkasa, an authorized distributor of sealant products serving contractors, applicators, developers, and building material stores across Indonesia.',
+  ogType: 'website',
+  ogSiteName: 'PT Anugerah Megah Perkasa',
+  ogTitle: 'About PT Anugerah Megah Perkasa | Sealant Distributor',
+  ogDescription: 'Learn about PT Anugerah Megah Perkasa, an authorized distributor of sealant products serving contractors, applicators, developers, and building material stores across Indonesia.',
+  ogImage: 'https://amperkasa.co.id/og-image.png',
+  ogImageAlt: 'PT Anugerah Megah Perkasa — Official Sealant Distributor',
+  ogUrl: 'https://amperkasa.co.id/about',
   twitterCard: 'summary_large_image',
-  twitterTitle: 'About PT Anugerah Megah Perkasa — Wacker & DURABUILD Distributor',
-  twitterDescription: 'Trusted Partner for Quality Sealant Solutions — Distributing Wacker and Durabuild in Indonesia.',
+  twitterTitle: 'About PT Anugerah Megah Perkasa | Sealant Distributor',
+  twitterDescription: 'Learn about PT Anugerah Megah Perkasa, an authorized distributor of sealant products serving contractors, applicators, developers, and building material stores across Indonesia.',
+  twitterImage: 'https://amperkasa.co.id/og-image.png',
+  robots: 'index, follow',
 })
 
 useHead({
-  title: 'About Us — PT Anugerah Megah Perkasa',
+  title: 'About PT Anugerah Megah Perkasa | Sealant Distributor',
   link: [
-    { rel: 'canonical', href: 'https://anugrah-megahperkasa.com/about' },
+    { rel: 'canonical', href: 'https://amperkasa.co.id/about' },
   ],
   script: [
     {
@@ -392,17 +397,20 @@ useHead({
         '@type': 'AboutPage',
         name: 'About PT Anugerah Megah Perkasa',
         description: company.description,
-        url: 'https://anugrah-megahperkasa.com/about',
+        url: 'https://amperkasa.co.id/about',
         mainEntity: {
           '@type': 'Organization',
           name: company.name,
           alternateName: ['PT AMP', 'Anugerah Megah Perkasa'],
+          url: 'https://amperkasa.co.id/',
+          logo: 'https://amperkasa.co.id/logo1.png',
           description: company.shortDescription,
           slogan: company.tagline,
-          brand: [
-            { '@type': 'Brand', name: 'WACKER' },
-            { '@type': 'Brand', name: 'DURABUILD' },
-          ],
+          brand: company.brandPartners.map(b => ({
+            '@type': 'Brand',
+            name: b.name,
+            description: b.description,
+          })),
         },
       }),
     },

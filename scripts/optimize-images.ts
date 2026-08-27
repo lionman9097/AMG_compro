@@ -42,7 +42,7 @@ async function main() {
       </text>
 
       <text x="100" y="520" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="400" fill="#71717a">
-        Jakarta, Indonesia  |  info@anugrah-megahperkasa.com  |  ISO 9001 Certified
+        Jakarta, Indonesia  |  admin@amperkasa.co.id  |  ISO 9001 Certified
       </text>
     </svg>
   `

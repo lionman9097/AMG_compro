@@ -85,19 +85,26 @@ const filteredProducts = computed(() => {
 })
 
 useSeoMeta({
-  title: 'Product Specifications & Technical Data Sheets (TDS) — PT Anugerah Megah Perkasa',
-  description: 'Download TDS technical specifications and view color options for high-performance silicone sealants and construction supporting materials in Indonesia.',
-  ogTitle: 'Silicone Sealant Catalog & Technical Data (TDS) — PT Anugerah Megah Perkasa',
-  ogDescription: 'One-component moisture cure silicone sealants for doors, windows, glass, and aluminum curtain walls. Density 1.50 g/cm³, 38 Shore A.',
-  ogImage: 'https://anugrah-megahperkasa.com/og-image.png',
-  ogUrl: 'https://anugrah-megahperkasa.com/products',
+  title: 'Silicone Sealants & Construction Adhesives | AMP',
+  description: 'Explore silicone sealants, adhesives, technical specifications, and application solutions from DURABUILD, WACKER, and SUPER SHIELD.',
+  ogType: 'website',
+  ogSiteName: 'PT Anugerah Megah Perkasa',
+  ogTitle: 'Silicone Sealants & Construction Adhesives | AMP',
+  ogDescription: 'Explore silicone sealants, adhesives, technical specifications, and application solutions from DURABUILD, WACKER, and SUPER SHIELD.',
+  ogImage: 'https://amperkasa.co.id/og-image.png',
+  ogImageAlt: 'PT Anugerah Megah Perkasa — Official Sealant Distributor',
+  ogUrl: 'https://amperkasa.co.id/products',
   twitterCard: 'summary_large_image',
+  twitterTitle: 'Silicone Sealants & Construction Adhesives | AMP',
+  twitterDescription: 'Explore silicone sealants, adhesives, technical specifications, and application solutions from DURABUILD, WACKER, and SUPER SHIELD.',
+  twitterImage: 'https://amperkasa.co.id/og-image.png',
+  robots: 'index, follow',
 })
 
 useHead({
-  title: 'Product Specifications & Technical Documentation — PT Anugerah Megah Perkasa',
+  title: 'Silicone Sealants & Construction Adhesives | AMP',
   link: [
-    { rel: 'canonical', href: 'https://anugrah-megahperkasa.com/products' },
+    { rel: 'canonical', href: 'https://amperkasa.co.id/products' },
   ],
   script: [
     {
@@ -106,6 +113,7 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'ItemList',
         name: 'Silicone Sealant Product Catalog',
+        url: 'https://amperkasa.co.id/products',
         description: 'High-performance silicone sealants distributed by PT Anugerah Megah Perkasa',
         itemListElement: products.map((prod, index) => ({
           '@type': 'Product',

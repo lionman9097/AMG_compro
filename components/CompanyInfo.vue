@@ -50,8 +50,9 @@
             </span>
           </a>
 
-          <!-- Phone Link -->
+          <!-- Phone Link (if available) -->
           <a
+            v-if="loc.phoneUrl && loc.phoneUrl !== '-' && loc.phone !== '-'"
             :href="loc.phoneUrl"
             class="group flex items-center justify-between px-2.5 py-1.5 rounded-lg bg-zinc-50 hover:bg-zinc-100 border border-zinc-200/70 text-zinc-700 transition-colors duration-150 gap-2"
             :title="`Call ${loc.title}`"
